@@ -182,93 +182,9 @@ body {
   }
 }
 
-/* ══════════════════════════════════════════════════════════════
-   HERO SECTION — All layout-critical styles live here so they
-   are guaranteed to load before the component renders (SSR-safe)
-══════════════════════════════════════════════════════════════ */
-
-/* Force the section to be exactly 100% of the viewport */
-.hero-section {
-  position: relative !important;
-  width: 100% !important;
-  height: 100vh !important;
-  min-height: 600px !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden !important;
-  background: #2B2A22;
-  display: block !important;
-}
-
-/* Swiper root div must fill the section completely */
-.hero-swiper {
-  width: 100% !important;
-  height: 100% !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  display: block !important;
-}
-
-/* Swiper's internal wrapper row must fill height */
-.hero-swiper > .swiper-wrapper {
-  width: 100% !important;
-  height: 100% !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Every individual slide must fill the wrapper */
-.hero-swiper > .swiper-wrapper > .swiper-slide {
-  width: 100% !important;
-  height: 100% !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-/* The actual background image fills its slide absolutely */
-.hero-bg-img {
-  position: absolute !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  display: block !important;
-  border: none !important;
-}
-
-/* Overlays sit above the image */
-.hero-overlay-color {
-  position: absolute;
-  inset: 0;
-  background: rgba(62, 59, 47, 0.45);
-  z-index: 1;
-  pointer-events: none;
-}
-.hero-overlay-gradient {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(43,42,34,0.88) 0%, transparent 55%, rgba(43,42,34,0.15) 100%);
-  z-index: 2;
-  pointer-events: none;
-}
-
-/* Kill every possible Swiper chrome element */
-.swiper,
-.swiper-wrapper,
-.swiper-slide,
-.hero-swiper,
-.hero-swiper .swiper-wrapper,
-.hero-swiper .swiper-slide {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* Swiper's own nav arrows — hidden, we use custom ones */
-.swiper-button-prev,
-.swiper-button-next {
-  display: none !important;
+/* Focus outlines for better accessibility */
+a:focus-visible, 
+button:focus-visible {
+  outline: 2px solid var(--color-sunset-gold);
+  outline-offset: 4px;
 }

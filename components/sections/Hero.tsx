@@ -1,342 +1,280 @@
 "use client";
 
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
+import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Wind, Zap } from "lucide-react";
 
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-const heroSlides = [
+/* ── DATA SECTION ── */
+const SLIDES = [
   {
-    id: 1,
+    id: "01",
+    image: "/images/slider/hero-signature.png",
+    title: "UNTAMED",
+    highlight: "LEGACY",
+    desc: "Venture into the heart of Yala, where the shadows of ancient granite boulders hide the world's most dense leopard population.",
+    location: "Block I, Yala West",
+    stats: [
+       { label: "Sightings", value: "94%" },
+       { label: "Guides", value: "Level 4" }
+    ]
+  },
+  {
+    id: "02",
+    image: "/images/slider/hero-elephants.png",
+    title: "GENTLE",
+    highlight: "GIANTS",
+    desc: "Witness the majestic migration of Asian elephant herds across the emerald lagoons of the southeastern plains.",
+    location: "Sella Kataragama",
+    stats: [
+        { label: "Population", value: "400+" },
+        { label: "Status", value: "Wild" }
+    ]
+  },
+  {
+    id: "03",
     image: "/images/yala-national-park/yala-national-park-sri-lanka-image5.jpg",
-    subtitle: "Explore The Untamed",
-    title: "Experience the Wild Beauty of Yala",
-    desc: "Embark on an unforgettable luxury safari through Sri Lanka's most renowned wildlife sanctuary.",
-  },
-  {
-    id: 2,
-    image: "/images/slider/slide-2.jpg",
-    subtitle: "The Apex Predator",
-    title: "Encounter the Elusive Leopard",
-    desc: "Join our expert rangers on a thrilling quest to spot the majestic Sri Lankan leopard in its natural habitat.",
-  },
-  {
-    id: 3,
-    image: "/images/slider/slide-3.jpg",
-    subtitle: "Gentle Giants",
-    title: "Witness the Giants of Yala",
-    desc: "Observe wild elephant herds roam freely across expansive savannahs and watering holes.",
-  },
-  {
-    id: 4,
-    image: "/images/slider/slide-4.jpg",
-    subtitle: "Premium Comfort",
-    title: "Discover Untamed Wilderness",
-    desc: "Experience the perfect balance of rugged adventure and premium comfort in our luxury safari jeeps.",
-  },
+    title: "SILENT",
+    highlight: "PROWL",
+    desc: "Experience the golden hour in Yala, a cinematic transition where predators emerge for the nightly chase under timber skies.",
+    location: "Palatupana Entrance",
+    stats: [
+       { label: "Terrain", value: "Arid" },
+       { label: "Species", value: "215+" }
+    ]
+  }
 ];
 
 export default function Hero() {
+  const [index, setIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  /* Auto-play logic */
+  useEffect(() => {
+    const timer = setInterval(() => {
+      handleNext();
+    }, 8000);
+    return () => clearInterval(timer);
+  }, [index]);
+
+  const handleNext = () => {
+    setDirection(1);
+    setIndex((prev) => (prev + 1) % SLIDES.length);
+  };
+
+  const handlePrev = () => {
+    setDirection(-1);
+    setIndex((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
+  };
+
+  const slide = SLIDES[index];
+
   return (
-    /* Inline style is the final guarantee — CSS class handles the rest */
-    <section
-      className="hero-section"
-      style={{ height: "100vh", minHeight: 600 }}
+    <section 
+      ref={containerRef}
+      className="relative w-full h-[100svh] min-h-[700px] overflow-hidden bg-deep-charcoal"
     >
-      <Swiper
-        modules={[Autoplay, EffectFade, Pagination, Navigation]}
-        effect="fade"
-        speed={1400}
-        autoplay={{ delay: 6000, disableOnInteraction: false }}
-        pagination={{
-          clickable: true,
-          renderBullet: (_i: number, cls: string) =>
-            `<span class="${cls} hero-bullet"></span>`,
-        }}
-        navigation={{ nextEl: ".hero-next", prevEl: ".hero-prev" }}
-        loop
-        allowTouchMove
-        className="hero-swiper"
-        /* Belt-and-suspenders: inline height in case Tailwind/class fights it */
-        style={{ width: "100%", height: "100%" }}
-      >
-        {heroSlides.map((slide) => (
-          <SwiperSlide
-            key={slide.id}
-            className="hero-slide group"
-            style={{ height: "100%" }}
+      {/* 1. Background Layers (Parallax Engine) */}
+      <AnimatePresence mode="wait" initial={false} custom={direction}>
+        <motion.div
+          key={index}
+          custom={direction}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="absolute inset-0 z-0"
+        >
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* Dynamic Cinematic Gradient Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal via-deep-charcoal/40 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-deep-charcoal via-transparent to-transparent z-10 opacity-60" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.4)_100%)] z-10" />
+        </motion.div>
+      </AnimatePresence>
+
+      {/* 2. Main Content Stack (Editorial Layout) */}
+      <div className="container mx-auto h-full px-6 md:px-12 relative z-20 flex flex-col justify-center">
+        
+        <div className="max-w-5xl">
+          {/* Top Info Bar */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex items-center gap-4 mb-8"
           >
-            {/* Full-bleed background — next/image for peak performance and virtual cropping */}
-            <div className="absolute inset-0 z-0">
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                priority={slide.id === 1}
-                sizes="100vw"
-                className="object-cover object-center transition-transform duration-[4000ms] group-[.swiper-slide-active]:scale-110"
-              />
+            <div className="flex -space-x-3">
+              {[1, 2, 3].map((i) => (
+                <div key={i} className="w-10 h-10 rounded-full border-2 border-sunset-gold relative overflow-hidden bg-olive-green/20 backdrop-blur-sm">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                     <Zap className="w-4 h-4 text-sunset-gold" strokeWidth={3} />
+                  </div>
+                </div>
+              ))}
             </div>
+            <div className="h-[1px] w-12 bg-sunset-gold/50" />
+            <span className="text-sunset-gold font-black text-xs md:text-sm tracking-[0.5em] uppercase">
+              Premier Wilderness Experience
+            </span>
+          </motion.div>
 
-            {/* Overlays (styles in globals.css) */}
-            <div className="hero-overlay-color" />
-            <div className="hero-overlay-gradient" />
-
-            {/* Text content */}
-            <div className="hero-content">
-              <span
-                tabIndex={0}
-                className="hero-eyebrow
-                  opacity-0 translate-y-5
-                  group-[.swiper-slide-active]:opacity-100 group-[.swiper-slide-active]:translate-y-0
-                  transition-all duration-700 delay-300 ease-out"
+          {/* Headline Engine (Modern Masking Effect) */}
+          <div className="mb-12 relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <span className="hero-eyebrow-line" />
-                {slide.subtitle}
-              </span>
+                <div className="overflow-hidden">
+                  <motion.h1 
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-5xl md:text-8xl lg:text-[12rem] font-black text-white leading-[0.85] tracking-tighter mix-blend-plus-lighter opacity-90"
+                  >
+                    {slide.title}
+                  </motion.h1>
+                </div>
+                <div className="overflow-hidden mt-[-10px]">
+                  <motion.h1 
+                    initial={{ y: "100%" }}
+                    animate={{ y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-5xl md:text-8xl lg:text-[12rem] font-black text-transparent stroke-white stroke-1 bg-clip-text bg-gradient-to-r from-sunset-gold to-warm-sand leading-[0.85] tracking-tighter"
+                  >
+                    {slide.highlight}
+                  </motion.h1>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
-              <h1
-                tabIndex={0}
-                className="hero-heading
-                  opacity-0 translate-y-8
-                  group-[.swiper-slide-active]:opacity-100 group-[.swiper-slide-active]:translate-y-0
-                  transition-all duration-700 delay-[500ms] ease-out"
-              >
-                {slide.title}
-              </h1>
-
-              <p
-                tabIndex={0}
-                className="hero-desc
-                  opacity-0 translate-y-5
-                  group-[.swiper-slide-active]:opacity-100 group-[.swiper-slide-active]:translate-y-0
-                  transition-all duration-700 delay-700 ease-out"
-              >
+          {/* Description & CTAs */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
+            <motion.div
+              key={`desc-${index}`}
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
+              <p className="text-warm-sand/80 text-lg md:text-xl font-medium leading-relaxed mb-10 max-w-md border-l-2 border-sunset-gold/30 pl-8 italic">
                 {slide.desc}
               </p>
-
-              <div
-                className="hero-cta-row
-                  opacity-0 translate-y-4
-                  group-[.swiper-slide-active]:opacity-100 group-[.swiper-slide-active]:translate-y-0
-                  transition-all duration-700 delay-[900ms] ease-out"
-              >
-                <Link href="/safari" className="hero-btn-primary group/pb">
-                  <span style={{ position: "relative", zIndex: 1 }}>Explore Safaris</span>
-                  <svg
-                    width="14" height="14" viewBox="0 0 24 24" fill="none"
-                    style={{ position: "relative", zIndex: 1 }}
-                    className="transition-transform duration-300 group-hover/pb:translate-x-1"
-                  >
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <div className="hero-btn-fill" />
+              
+              <div className="flex flex-wrap items-center gap-6">
+                <Link 
+                  href="/safari"
+                  className="group relative overflow-hidden bg-sunset-gold px-10 py-5 rounded-full text-deep-charcoal font-black text-sm tracking-widest transition-all hover:scale-110 active:scale-95 flex items-center gap-4 shadow-[0_0_40px_rgba(208,122,63,0.3)]"
+                >
+                  DISCOVER THE WILD
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" strokeWidth={3} />
                 </Link>
-
-                <Link href="/contact" className="hero-btn-ghost group/gb">
-                  <span>Inquire Now</span>
-                  <svg
-                    width="13" height="13" viewBox="0 0 24 24" fill="none"
-                    className="transition-transform duration-300 group-hover/gb:translate-x-1"
-                  >
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
+                
+                <Link 
+                  href="/booking"
+                  className="text-white hover:text-sunset-gold font-bold text-sm tracking-widest border-b-2 border-white/20 pb-1 transition-all flex items-center gap-3"
+                >
+                  SECURE A JEEP
+                  <Zap className="w-4 h-4" />
                 </Link>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </motion.div>
 
-        {/* Side navigation arrows */}
-        <button aria-label="Previous slide" className="hero-prev hero-nav-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-        <button aria-label="Next slide" className="hero-next hero-nav-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-      </Swiper>
+            {/* Floating Location Card (Glassmorphism) */}
+            <motion.div
+              key={`card-${index}`}
+              initial={{ opacity: 0, scale: 0.8, x: 50 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="hidden lg:block bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group hover:bg-white/10 transition-colors"
+            >
+              <div className="absolute top-0 right-0 p-8">
+                 <Wind className="text-sunset-gold/30 w-16 h-16 animate-pulse" />
+              </div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 text-sunset-gold mb-4">
+                  <MapPin className="w-5 h-5" />
+                  <span className="text-xs font-black uppercase tracking-[0.3em]">{slide.location}</span>
+                </div>
+                <div className="grid grid-cols-2 gap-12">
+                  {slide.stats.map((stat, i) => (
+                    <div key={i}>
+                      <span className="block text-4xl font-black text-soft-beige">{stat.value}</span>
+                      <span className="block text-[10px] uppercase font-black tracking-widest text-warm-sand/40">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
 
-      {/* UI-only styles — layout-critical CSS is in globals.css */}
-      <style>{`
-        .hero-content {
-          position: absolute;
-          top: 0; left: 0; right: 0; bottom: 0;
-          z-index: 10;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          padding-top: 15vh;
-          padding-left: 24px;
-          padding-right: 24px;
-          max-width: 1440px;
-        }
-        @media (min-width: 768px)  { .hero-content { padding-left: 6vw; padding-top: 18vh; } }
-        @media (min-width: 1024px) { .hero-content { padding-left: 8vw; padding-top: 20vh; } }
+      </div>
 
-        .hero-eyebrow {
-          display: inline-flex;
-          align-items: center;
-          gap: 12px;
-          margin-bottom: 20px;
-          color: #D07A3F;
-          font-weight: 800;
-          font-size: 13px;
-          letter-spacing: 0.3em;
-          text-transform: uppercase;
-          text-shadow: 0px 2px 6px rgba(0,0,0,0.8);
-        }
-        .hero-eyebrow-line {
-          display: inline-block;
-          width: 32px;
-          height: 2px;
-          background: #D07A3F;
-          flex-shrink: 0;
-          box-shadow: 0 1px 3px rgba(0,0,0,0.6);
-        }
-        .hero-heading {
-          color: #F2E6CE;
-          font-weight: 800;
-          line-height: 1.08;
-          margin: 0 0 20px;
-          max-width: 14ch;
-          text-shadow: 0 4px 24px rgba(0,0,0,0.8);
-          font-size: clamp(2rem, 5.5vw, 5rem);
-        }
-        .hero-desc {
-          color: #F2E6CE;
-          font-weight: 500;
-          font-size: clamp(1rem, 1.4vw, 1.15rem);
-          max-width: 500px;
-          line-height: 1.75;
-          margin: 0 0 36px;
-          text-shadow: 0 2px 6px rgba(0,0,0,0.8);
-        }
-        .hero-cta-row {
-          display: flex;
-          align-items: center;
-          gap: 28px;
-          flex-wrap: wrap;
-        }
+      {/* 3. Navigation Controls (Next Level) */}
+      <div className="absolute right-8 bottom-12 z-30 flex items-center gap-8">
+        {/* Progress Circle Indicators */}
+        <div className="flex items-center gap-4">
+          {SLIDES.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                setDirection(i > index ? 1 : -1);
+                setIndex(i);
+              }}
+              className="group relative w-12 h-12 flex items-center justify-center transition-all"
+            >
+              <div className={`w-2 h-2 rounded-full transition-all duration-500 ${index === i ? "bg-sunset-gold scale-150 shadow-[0_0_15px_rgba(208,122,63,0.8)]" : "bg-white/20"}`} />
+              <svg className="absolute inset-0 w-full h-full rotate-[-90deg]">
+                <circle
+                  cx="50%" cy="50%" r="20"
+                  className={`fill-none stroke-sunset-gold stroke-[1] transition-all duration-[6000ms] ${index === i ? "opacity-100" : "opacity-0"}`}
+                  strokeDasharray="126"
+                  strokeDashoffset={index === i ? "0" : "126"}
+                />
+              </svg>
+            </button>
+          ))}
+        </div>
 
-        /* Primary button */
-        .hero-btn-primary {
-          position: relative;
-          overflow: hidden;
-          display: inline-flex;
-          align-items: center;
-          gap: 8px;
-          background: #D07A3F;
-          color: #F2E6CE;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          padding: 13px 24px;
-          text-decoration: none;
-        }
-        .hero-btn-fill {
-          position: absolute;
-          inset: 0;
-          background: #2B2A22;
-          width: 0;
-          transition: width 0.3s ease-out;
-          z-index: 0;
-        }
-        .hero-btn-primary:hover .hero-btn-fill { width: 100%; }
+        {/* Arrow Buttons */}
+        <div className="flex items-center gap-4 ml-6 pl-6 border-l border-white/10">
+          <button 
+            onClick={handlePrev}
+            className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-sunset-gold hover:border-sunset-gold transition-all group"
+          >
+            <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
+          </button>
+          <button 
+            onClick={handleNext}
+            className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-sunset-gold hover:border-sunset-gold transition-all group"
+          >
+            <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
+          </button>
+        </div>
+      </div>
 
-        /* Ghost button */
-        .hero-btn-ghost {
-          display: inline-flex;
-          align-items: center;
-          gap: 7px;
-          color: rgba(242,230,206,0.65);
-          font-size: 11px;
-          font-weight: 600;
-          letter-spacing: 0.18em;
-          text-transform: uppercase;
-          text-decoration: none;
-          transition: color 0.3s;
-        }
-        .hero-btn-ghost:hover { color: #F2E6CE; }
+      {/* Side Decorative IDs */}
+      <div className="absolute left-8 bottom-12 hidden md:flex flex-col gap-4 items-center">
+         <span className="text-sunset-gold font-black text-xl italic tracking-tighter">
+            {slide.id}
+         </span>
+         <div className="h-24 w-[1px] bg-gradient-to-t from-sunset-gold to-transparent" />
+      </div>
 
-        /* Navigation arrows */
-        .hero-nav-btn {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          z-index: 20;
-          width: 40px; height: 40px;
-          border-radius: 50%;
-          border: 1px solid rgba(255,255,255,0.2);
-          background: rgba(255,255,255,0.05);
-          backdrop-filter: blur(6px);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: rgba(255,255,255,0.7);
-          cursor: pointer;
-          transition: background 0.3s, border-color 0.3s, color 0.3s;
-        }
-        .hero-nav-btn:hover { background:#D07A3F; border-color:#D07A3F; color:#fff; }
-        .hero-prev { left: 16px; }
-        .hero-next { right: 16px; }
-        @media (min-width: 768px) {
-          .hero-prev { left: 28px; }
-          .hero-next { right: 28px; }
-          .hero-nav-btn { width: 46px; height: 46px; }
-        }
-
-        /* Pagination */
-        .swiper-pagination {
-          bottom: 28px !important;
-          left: 0 !important;
-          width: 100% !important;
-          text-align: left !important;
-          padding-left: 24px;
-          display: flex;
-          align-items: center;
-        }
-        @media (min-width: 768px)  { .swiper-pagination { padding-left: 48px; bottom: 36px !important; } }
-        @media (min-width: 1024px) { .swiper-pagination { padding-left: 64px; } }
-
-        .hero-bullet {
-          display: inline-block;
-          width: 20px; height: 1.5px;
-          background: rgba(242,230,206,0.3);
-          margin: 0 4px;
-          border-radius: 0;
-          cursor: pointer;
-          opacity: 1 !important;
-          transition: width 0.4s ease, background 0.4s ease;
-        }
-        .swiper-pagination-bullet-active.hero-bullet {
-          background: #D07A3F;
-          width: 36px;
-        }
-
-        /* Focus outlines for better accessibility */
-        .hero-eyebrow:focus-visible,
-        .hero-heading:focus-visible,
-        .hero-desc:focus-visible,
-        .hero-btn-primary:focus-visible,
-        .hero-btn-ghost:focus-visible,
-        .hero-nav-btn:focus-visible,
-        .hero-bullet:focus-visible {
-          outline: 2px solid #D07A3F;
-          outline-offset: 4px;
-          border-radius: 4px;
-        }
-
-      `}</style>
     </section>
   );
 }
