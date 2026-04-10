@@ -1,26 +1,274 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* 60% Base Colors */
+  --color-warm-sand: #E8DCC2;
+
+  /* 30% Secondary Colors */
+  --color-olive-green: #6B6F3A;
+  --color-safari-brown: #3E3B2F;
+
+  /* 10% Accent Colors */
+  --color-sunset-gold: #D07A3F;
+
+  /* Text Colors */
+  --color-deep-charcoal: #2B2A22;
+  --color-soft-beige: #F2E6CE;
+
+  /* Overriding default color roles */
+  --color-background: var(--color-warm-sand);
+  --color-foreground: var(--color-deep-charcoal);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: #E8DCC2; /* Warm Sand */
+  --foreground: #2B2A22; /* Deep Charcoal */
+}
+
+/* Remove default dark mode query and enforce the light premium safari palette consistently as requested by AGENTS.md */
+
+/* ── Critical full-width reset ── */
+html, body {
+  width: 100%;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Base text size and line height */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@layer base {
+  /* Typography Scale */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-deep-charcoal);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em; /* Tighten large text slightly for premium feel */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+  @media (min-width: 768px) {
+    h1 { font-size: 3.5rem; /* 56px */ }
+  }
+
+  h2 {
+    font-size: 2rem; /* 32px */
+  }
+  @media (min-width: 768px) {
+    h2 { font-size: 2.5rem; }
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px */
+  }
+  @media (min-width: 768px) {
+    h3 { font-size: 1.75rem; }
+  }
+
+  h4 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  /* Paragraphs and Structural Elements */
+  p {
+    margin-bottom: 1.25rem;
+    line-height: 1.75;
+    color: inherit;
+    opacity: 0.9; /* Slight softening of paragraph text vs headings */
+  }
+
+  /* Remove bottom margin from last paragraph inside containers */
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Common Lists */
+  ul, ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Global Link Behavior */
+  a {
+    transition-property: color, background-color, border-color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Ensure interactive elements have visible focus outline for accessibility */
+  a:focus-visible, 
+  button:focus-visible {
+    outline: 2px solid var(--color-sunset-gold);
+    outline-offset: 4px;
+  }
+  
+  /* Sections: spacious layout by default per AGENT.md guidelines */
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  @media (min-width: 768px) {
+    section {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  /* Hero section must never have section padding — it is full-viewport */
+  .hero-section {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .animate-bounce {
+    animation: customBounce 2s infinite;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes customBounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   HERO SECTION — All layout-critical styles live here so they
+   are guaranteed to load before the component renders (SSR-safe)
+══════════════════════════════════════════════════════════════ */
+
+/* Force the section to be exactly 100% of the viewport */
+.hero-section {
+  position: relative !important;
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 600px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  background: #2B2A22;
+  display: block !important;
+}
+
+/* Swiper root div must fill the section completely */
+.hero-swiper {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  display: block !important;
+}
+
+/* Swiper's internal wrapper row must fill height */
+.hero-swiper > .swiper-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Every individual slide must fill the wrapper */
+.hero-swiper > .swiper-wrapper > .swiper-slide {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* The actual background image fills its slide absolutely */
+.hero-bg-img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+  border: none !important;
+}
+
+/* Overlays sit above the image */
+.hero-overlay-color {
+  position: absolute;
+  inset: 0;
+  background: rgba(62, 59, 47, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(43,42,34,0.88) 0%, transparent 55%, rgba(43,42,34,0.15) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Kill every possible Swiper chrome element */
+.swiper,
+.swiper-wrapper,
+.swiper-slide,
+.hero-swiper,
+.hero-swiper .swiper-wrapper,
+.hero-swiper .swiper-slide {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Swiper's own nav arrows — hidden, we use custom ones */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
 }
