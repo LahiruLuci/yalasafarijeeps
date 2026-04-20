@@ -19,7 +19,7 @@ const packages = [
     time: "1:30 PM - 6:00 PM",
     description:
       "Journey begins at 1:30pm from the hotel you abode. While the warmth of the sun teases, watch the leopards awaken for their evening prowl.",
-    image: "/images/evening-safari-yala-national-park.jpg",
+    image: "/images/new-images/evening-safari.webp",
     href: "/safari/evening",
   },
   {
@@ -51,8 +51,9 @@ export default function SafariPackages() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {packages.map((pkg) => (
-            <div
+            <Link
               key={pkg.id}
+              href={pkg.href}
               className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col transform hover:-translate-y-2"
             >
               <div className="relative h-64 overflow-hidden">
@@ -81,17 +82,16 @@ export default function SafariPackages() {
                 <p className="text-safari-brown/70 leading-relaxed mb-8 flex-1">
                   {pkg.description}
                 </p>
-                <Link
-                  href={pkg.href}
+                <div
                   className="inline-flex items-center gap-2 text-sunset-gold font-bold text-sm tracking-widest uppercase transition-all duration-300 group-hover:gap-3"
                 >
                   Explore Details
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         

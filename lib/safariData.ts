@@ -22,7 +22,7 @@ export const safariPackages: SafariPackage[] = [
     image: "/images/yala-national-park/yala-national-park-sri-lanka-image1.jpg",
     heroImage: "/images/yala-national-park/yala-national-park-sri-lanka-image2.jpg",
     duration: "4-5 Hours",
-    time: "5:00 AM - 10:00 AM",
+    time: "5:30 AM - 10:30 AM",
     highlights: [
         "Sunrise wildlife photography",
         "Active leopard tracking",

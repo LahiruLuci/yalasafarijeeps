@@ -189,6 +189,7 @@ export default function ContactForm() {
                        <input 
                          type="date" 
                          value={formData.date}
+                         min={new Date().toISOString().split("T")[0]}
                          onChange={(e) => setFormData({...formData, date: e.target.value})}
                          onFocus={() => setFocused('date')} 
                          onBlur={() => setFocused(null)}

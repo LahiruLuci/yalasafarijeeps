@@ -64,7 +64,7 @@ export default function SafariBookingCTA({ safari }: { safari: SafariPackage }) 
 
               {/* Direct Booking */}
               <Link
-                href="/booking"
+                href={`/booking?type=${safari.slug}`}
                 className="group relative overflow-hidden flex-1 flex flex-col items-center justify-center gap-2 bg-deep-charcoal text-white rounded-2xl px-6 py-6 font-black text-sm tracking-widest uppercase text-center hover:bg-olive-green transition-colors duration-300 shadow-xl"
               >
                 <span className="absolute inset-0 -translate-x-full skew-x-[20deg] bg-white/10 group-hover:translate-x-full transition-transform duration-700" />

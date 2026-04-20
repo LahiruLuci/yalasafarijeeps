@@ -1,9 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
+
+const safariTypeMap: Record<string, string> = {
+  "morning": "Morning Safari",
+  "evening": "Evening Safari",
+  "full-day": "Full Day Safari",
+  "special": "Private Specialized Tour"
+};
 
 export default function BookingForm() {
+  const searchParams = useSearchParams();
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [safariType, setSafariType] = useState("Morning Safari");
+
+  // Autofill Safari Type from URL
+  useEffect(() => {
+    const type = searchParams.get("type");
+    if (type && safariTypeMap[type]) {
+      setSafariType(safariTypeMap[type]);
+    }
+  }, [searchParams]);
+
+  const today = new Date().toISOString().split("T")[0];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -78,7 +98,12 @@ export default function BookingForm() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black uppercase tracking-widest text-safari-brown/60 ml-2">Safari Type</label>
-                      <select required className="w-full bg-white border border-warm-sand/50 rounded-2xl px-6 py-4 outline-none focus:border-sunset-gold transition-colors font-bold text-deep-charcoal">
+                      <select 
+                        required 
+                        value={safariType}
+                        onChange={(e) => setSafariType(e.target.value)}
+                        className="w-full bg-white border border-warm-sand/50 rounded-2xl px-6 py-4 outline-none focus:border-sunset-gold transition-colors font-bold text-deep-charcoal"
+                      >
                         <option>Morning Safari</option>
                         <option>Evening Safari</option>
                         <option>Full Day Safari</option>
@@ -87,7 +112,12 @@ export default function BookingForm() {
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black uppercase tracking-widest text-safari-brown/60 ml-2">Safari Date</label>
-                      <input required type="date" className="w-full bg-white border border-warm-sand/50 rounded-2xl px-6 py-4 outline-none focus:border-sunset-gold transition-colors font-bold text-deep-charcoal" />
+                      <input 
+                        required 
+                        type="date" 
+                        min={today}
+                        className="w-full bg-white border border-warm-sand/50 rounded-2xl px-6 py-4 outline-none focus:border-sunset-gold transition-colors font-bold text-deep-charcoal" 
+                      />
                     </div>
                   </div>
 

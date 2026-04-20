@@ -22,7 +22,7 @@ export default function MissionVision() {
         <span className="text-soft-beige font-black text-xl tracking-wider uppercase">Core</span>
       </div>
 
-      <div className="flex flex-col lg:flex-row h-[100vh] lg:h-[85vh] w-[100vw] overflow-hidden">
+      <div className="flex flex-col lg:flex-row h-[100vh] lg:h-[85vh] w-full overflow-hidden">
         
         {/* === THE MISSION PANEL === */}
         <div 

@@ -29,7 +29,7 @@ const safariTypes = [
     subtitle: "Twilight Encounter",
     time: "1:30 PM – 6:00 PM",
     duration: "4.5 Hours",
-    image: "/images/evening-safari-yala-national-park.jpg",
+    image: "/images/new-images/evening-safari.webp",
     href: "/safari/evening",
     accentColor: "bg-olive-green",
     description:
@@ -176,15 +176,6 @@ export default function SafariTypesList() {
 
             {/* CTA */}
             <div className="flex gap-4 flex-wrap">
-              <Link
-                href={active.href}
-                className="inline-flex items-center gap-3 px-8 py-4 bg-sunset-gold text-deep-charcoal font-black text-sm tracking-widest uppercase rounded-full hover:shadow-[0_0_40px_rgba(208,122,63,0.5)] transition-all duration-300 transform hover:-translate-y-1"
-              >
-                Book Now
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19"></path>
-                </svg>
-              </Link>
               <Link
                 href={active.href}
                 className="inline-flex items-center gap-3 px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-sm tracking-widest uppercase rounded-full hover:bg-white/20 hover:border-sunset-gold/50 transition-all duration-300 group/detail"

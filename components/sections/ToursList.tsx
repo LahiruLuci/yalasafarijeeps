@@ -9,41 +9,49 @@ const itinerary = [
     day: "01",
     title: "Arrival in Colombo",
     desc: "Arrive at Bandaranaike International Airport. Transfer to your hotel in Colombo. Spend the evening exploring Colombo's vibrant street markets, shopping, and dining.",
+    image: "/images/airport-transfer.jpg"
   },
   {
     day: "02",
     title: "Colombo to Kandy",
     desc: "After breakfast, depart for Kandy. En-route, visit the Pinnawala Elephant Orphanage. In Kandy, visit the Temple of the Tooth Relic and enjoy a cultural dance show.",
+    image: "/images/new-images/kandy.webp"
   },
   {
     day: "03",
     title: "Kandy to Nuwara Eliya",
     desc: "Head to Nuwara Eliya, known as 'Little England' for its scenic beauty. En-route, visit a tea plantation and factory. Explore Nuwara Eliya's lush greenery and waterfalls.",
+    image: "/images/new-images/nuwara-eliya.webp"
   },
   {
     day: "04",
     title: "Nuwara Eliya to Ella",
     desc: "Depart for Ella, a picturesque hill station. Visit the stunning Ramboda Falls and the famous Nine Arch Bridge. Enjoy hiking and exploring Ella's beautiful landscapes.",
+    image: "/images/new-images/ella.webp"
   },
   {
     day: "05",
     title: "Ella to Yala National Park",
     desc: "Travel to Yala National Park. Take an afternoon jeep safari to spot wildlife such as leopards, elephants, and exotic birds. Overnight stay near the park.",
+    image: "/images/morning-safari-yala-national-park.jpg"
   },
   {
     day: "06",
     title: "Full Day Safari at Yala",
     desc: "The definitive Yala experience. Spend a full 12 hours inside the park tracking leopards and observing the vibrant ecosystem. Includes a wilderness picnic lunch.",
+    image: "/images/full-day-safari.jpg"
   },
   {
     day: "07",
     title: "Yala to Galle",
     desc: "Head to Galle. Explore the historic Galle Fort, a UNESCO World Heritage Site. Enjoy leisurely walks along the fort walls and visit Galle's charming colonial streets.",
+    image: "/images/new-images/galle.webp"
   },
   {
     day: "08",
     title: "Galle to Airport",
     desc: "Depending on your flight schedule, enjoy free time for last-minute shopping. Check-out from the hotel and proceed to Bandaranaike International Airport for departure.",
+    image: "/images/airport-transfer.jpg"
   },
 ];
 
@@ -76,11 +84,7 @@ export default function ToursList() {
             <div className="lg:sticky lg:top-32 lg:h-[600px] transition-all duration-300">
               <div className="relative h-full w-full rounded-[3rem] overflow-hidden shadow-2xl group border-[12px] border-white z-10">
                 <Image
-                  src={
-                    activeDay === 4 || activeDay === 5 ? "/images/full-day-safari.jpg" 
-                    : activeDay === 2 || activeDay === 3 ? "/images/yala-national-park/yala-national-park-sri-lanka-image7.jpg"
-                    : "/images/yala-safari-accomodation-banner.jpg" 
-                  }
+                  src={itinerary[activeDay].image || "/images/yala-safari-accomodation-banner.jpg"}
                   alt={itinerary[activeDay].title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"

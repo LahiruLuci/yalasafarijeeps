@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import BookingHero from "@/components/sections/BookingHero";
 import BookingForm from "@/components/sections/BookingForm";
 import BookingBenefits from "@/components/sections/BookingBenefits";
@@ -19,7 +20,9 @@ export default function BookingPage() {
         <BookingHero />
 
         {/* 2. Direct Booking Form Section */}
-        <BookingForm />
+        <Suspense fallback={<div className="py-20 text-center">Loading booking form...</div>}>
+          <BookingForm />
+        </Suspense>
 
         {/* 3. Why Book with Us */}
         <BookingBenefits />

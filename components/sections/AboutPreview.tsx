@@ -58,8 +58,8 @@ export default function AboutPreview() {
             {/* The main image wrapper with an offset border design */}
             <div className="relative z-10 w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/yala-banner.jpg"
-                alt="Yala Safari Jeeps - Expert Wildlife Guide in Sri Lanka"
+                src="/images/new-images/our-story.webp"
+                alt="Yala Safari Jeeps - Our Story"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-1000 hover:scale-105"

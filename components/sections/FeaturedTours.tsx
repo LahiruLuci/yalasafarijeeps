@@ -9,7 +9,7 @@ const tours = [
     title: "Immersive Multi-Day Expeditions",
     subtitle: "Comprehensive Journeys",
     description: "Experience the ultimate Sri Lankan adventure. Our pre-designed multi-day tours seamlessly blend ancient cultural heritage, breathtaking hill country train rides, and exhilarating wildlife safaris into one unforgettable expedition.",
-    image: "/images/yala-safari-accomodation-banner.jpg",
+    image: "/images/new-images/ella-image.webp",
     features: ["Pre-planned Itineraries", "Luxury Stays", "Island Wide Coverage"],
     href: "/tours",
     align: "left",
@@ -47,9 +47,10 @@ export default function FeaturedTours() {
         {/* Panoramic Tour Cards */}
         <div className="flex flex-col gap-12 md:gap-16">
           {tours.map((tour, idx) => (
-            <div 
+            <Link 
+              href={tour.href}
               key={tour.id}
-              className="group relative h-[500px] md:h-[600px] w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700"
+              className="group relative h-[620px] md:h-[720px] w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 block cursor-pointer"
             >
               {/* Full Width Background Image */}
               <div className="absolute inset-0">
@@ -68,7 +69,7 @@ export default function FeaturedTours() {
 
               {/* Glassmorphism Content Panel */}
               <div 
-                className={`absolute inset-y-0 ${tour.align === 'left' ? 'left-0' : 'right-0'} w-full md:w-3/5 lg:w-1/2 p-8 md:p-16 flex flex-col justify-center`}
+                className={`absolute inset-y-0 ${tour.align === 'left' ? 'left-0' : 'right-0'} w-full md:w-3/5 lg:w-1/2 px-8 py-12 md:px-16 md:py-20 flex flex-col justify-center`}
               >
                 <div className={`relative z-10 ${tour.align === 'left' ? 'md:pr-12' : 'md:pl-12'} transform transition-all duration-700 group-hover:-translate-y-2`}>
                   
@@ -99,23 +100,20 @@ export default function FeaturedTours() {
                     ))}
                   </ul>
 
-                  <Link 
-                    href={tour.href}
-                    className="inline-flex items-center gap-4 group/btn"
-                  >
+                  <span className="inline-flex items-center gap-4 group/btn">
                     <span className="text-sunset-gold font-bold text-sm tracking-[0.2em] uppercase">
                       Explore Itinerary
                     </span>
-                    <div className="w-12 h-12 rounded-full border border-sunset-gold/50 flex items-center justify-center text-sunset-gold group-hover/btn:bg-sunset-gold group-hover/btn:text-white transition-colors duration-300">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover/btn:translate-x-1">
+                    <div className="w-12 h-12 rounded-full border border-sunset-gold/50 flex items-center justify-center text-sunset-gold group-hover:bg-sunset-gold group-hover:text-white transition-colors duration-300">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform duration-300 group-hover:translate-x-1">
                         <path d="M5 12H19M19 12L12 5M19 12L12 19"></path>
                       </svg>
                     </div>
-                  </Link>
+                  </span>
 
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

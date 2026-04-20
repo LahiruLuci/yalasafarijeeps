@@ -3,7 +3,7 @@ import CompanyStory from "@/components/sections/CompanyStory";
 import MissionVision from "@/components/sections/MissionVision";
 import ExperienceOverview from "@/components/sections/ExperienceOverview";
 import TeamSection from "@/components/sections/TeamSection";
-import AboutCTA from "@/components/sections/AboutCTA";
+import BookingCTA from "@/components/sections/BookingCTA";
 
 export const metadata = {
   title: "About Us | Yala Safari Jeeps",
@@ -33,7 +33,7 @@ export default function AboutPage() {
         <TeamSection />
 
         {/* 6. About CTA */}
-        <AboutCTA />
+        <BookingCTA />
       </main>
     </div>
   );

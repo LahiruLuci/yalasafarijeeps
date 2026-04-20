@@ -28,7 +28,7 @@ const chapters = [
 
 export default function CompanyStory() {
   return (
-    <section className="bg-warm-sand/30 py-24 md:py-40 relative px-4 md:px-8">
+    <section className="bg-warm-sand/30 py-24 md:py-40 relative overflow-hidden px-4 md:px-8">
       {/* Background ambient text */}
       <div className="absolute top-32 -left-24 text-[12vw] font-black text-deep-charcoal/5 whitespace-nowrap pointer-events-none origin-bottom-left -rotate-90">
         LEGACY

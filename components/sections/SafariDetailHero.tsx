@@ -6,7 +6,7 @@ import { SafariPackage } from "@/lib/safariData";
 
 export default function SafariDetailHero({ safari }: { safari: SafariPackage }) {
   return (
-    <section className="relative h-[70vh] md:h-[80vh] min-h-[600px] flex items-center overflow-hidden bg-deep-charcoal">
+    <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center bg-deep-charcoal py-20 px-0">
       
       {/* Dynamic Background Image */}
       <div className="absolute inset-0">
@@ -21,7 +21,7 @@ export default function SafariDetailHero({ safari }: { safari: SafariPackage }) 
         <div className="absolute inset-0 bg-gradient-to-t from-deep-charcoal via-deep-charcoal/40 to-transparent" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 pt-20">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 py-12">
         <div className="max-w-4xl">
           
           {/* Breadcrumb style pre-title */}
@@ -60,7 +60,7 @@ export default function SafariDetailHero({ safari }: { safari: SafariPackage }) 
 
           <div className="mt-12 flex flex-col sm:flex-row gap-6 animate-fadeInUp delay-500">
             <Link
-              href="/booking"
+              href={`/booking?type=${safari.slug}`}
               className="px-12 py-5 bg-sunset-gold text-deep-charcoal font-black text-sm tracking-widest uppercase rounded-full shadow-2xl hover:bg-white hover:scale-105 transition-all duration-300"
             >
               Secure Your Slot

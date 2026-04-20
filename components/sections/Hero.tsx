@@ -10,6 +10,18 @@ import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Wind, Zap } from "lucide
 const SLIDES = [
   {
     id: "01",
+    image: "/images/new-images/wildlife-page-hero-image.webp",
+    title: "ETERNAL",
+    highlight: "WILDLIFE",
+    desc: "Immerse yourself in the sanctuary of biodiversity, where rare endemic species thrive amidst the untamed beauty of Yala's nature.",
+    location: "Yala National Park",
+    stats: [
+       { label: "Diversity", value: "High" },
+       { label: "Species", value: "300+" }
+    ]
+  },
+  {
+    id: "02",
     image: "/images/slider/hero-signature.png",
     title: "UNTAMED",
     highlight: "LEGACY",
@@ -21,7 +33,7 @@ const SLIDES = [
     ]
   },
   {
-    id: "02",
+    id: "03",
     image: "/images/slider/hero-elephants.png",
     title: "GENTLE",
     highlight: "GIANTS",
@@ -33,7 +45,7 @@ const SLIDES = [
     ]
   },
   {
-    id: "03",
+    id: "04",
     image: "/images/yala-national-park/yala-national-park-sri-lanka-image5.jpg",
     title: "SILENT",
     highlight: "PROWL",
@@ -106,27 +118,6 @@ export default function Hero() {
       <div className="container mx-auto h-full px-6 md:px-12 relative z-20 flex flex-col justify-center">
         
         <div className="max-w-5xl">
-          {/* Top Info Bar */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="flex items-center gap-4 mb-8"
-          >
-            <div className="flex -space-x-3">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-sunset-gold relative overflow-hidden bg-olive-green/20 backdrop-blur-sm">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                     <Zap className="w-4 h-4 text-sunset-gold" strokeWidth={3} />
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="h-[1px] w-12 bg-sunset-gold/50" />
-            <span className="text-sunset-gold font-black text-xs md:text-sm tracking-[0.5em] uppercase">
-              Premier Wilderness Experience
-            </span>
-          </motion.div>
 
           {/* Headline Engine (Modern Masking Effect) */}
           <div className="mb-12 relative">
