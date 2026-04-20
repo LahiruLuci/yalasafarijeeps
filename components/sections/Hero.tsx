@@ -115,7 +115,7 @@ export default function Hero() {
       </AnimatePresence>
 
       {/* 2. Main Content Stack (Editorial Layout) */}
-      <div className="container mx-auto h-full px-6 md:px-12 relative z-20 flex flex-col justify-center">
+      <div className="container mx-auto h-full px-6 md:px-12 relative z-20 flex flex-col justify-center pt-16 md:pt-24">
         
         <div className="max-w-5xl">
 
@@ -134,17 +134,17 @@ export default function Hero() {
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-5xl md:text-8xl lg:text-[12rem] font-black text-white leading-[0.85] tracking-tighter mix-blend-plus-lighter opacity-90"
+                    className="text-5xl md:text-8xl lg:text-[9rem] font-black text-white leading-[0.85] tracking-tighter mix-blend-plus-lighter opacity-90"
                   >
                     {slide.title}
                   </motion.h1>
                 </div>
-                <div className="overflow-hidden mt-[-10px]">
+                <div className="overflow-hidden mt-[-10px] md:mt-[-20px]">
                   <motion.h1 
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-5xl md:text-8xl lg:text-[12rem] font-black text-transparent stroke-white stroke-1 bg-clip-text bg-gradient-to-r from-sunset-gold to-warm-sand leading-[0.85] tracking-tighter"
+                    className="text-5xl md:text-8xl lg:text-[9rem] font-black text-transparent stroke-white stroke-1 bg-clip-text bg-gradient-to-r from-sunset-gold to-warm-sand leading-[0.85] tracking-tighter"
                   >
                     {slide.highlight}
                   </motion.h1>
