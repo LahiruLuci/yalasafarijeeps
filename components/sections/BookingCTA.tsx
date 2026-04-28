@@ -8,7 +8,7 @@ export default function BookingCTA() {
     <section className="bg-warm-sand/20 py-24 md:py-32 px-4 md:px-8 relative overflow-hidden">
       
       {/* Massive Cinematic Floating Banner */}
-      <div className="max-w-7xl mx-auto relative rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] group h-[500px] md:h-[600px] flex items-center justify-center border border-white/20">
+      <div className="max-w-7xl mx-auto relative rounded-[2rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] group min-h-[550px] md:h-[600px] flex items-center justify-center border border-white/20">
         
         {/* Continuous Slow Parallax Background */}
         <div className="absolute inset-0 w-full h-full">
@@ -29,7 +29,7 @@ export default function BookingCTA() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-sunset-gold/20 rounded-full blur-[120px] mix-blend-screen z-10 transform group-hover:translate-x-12 group-hover:-translate-y-12 transition-transform duration-[10s]" />
 
         {/* Foreground Content */}
-        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto w-full flex flex-col items-center">
+        <div className="relative z-20 text-center px-6 py-16 md:px-4 md:py-0 max-w-4xl mx-auto w-full flex flex-col items-center">
           
           <div className="overflow-hidden mb-4">
             <span className="text-sunset-gold font-extrabold text-sm tracking-[0.4em] uppercase block transform group-hover:scale-105 transition-transform duration-1000">
@@ -37,14 +37,14 @@ export default function BookingCTA() {
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-[1.1] tracking-tight drop-shadow-2xl">
+          <h2 className="text-3xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-[1.2] md:leading-[1.1] tracking-tight drop-shadow-2xl">
             Your Wildest Dreams <br/>
             <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-soft-beige via-white to-soft-beige">
               Are Waiting
             </span>
           </h2>
 
-          <p className="text-lg md:text-xl text-warm-sand/90 font-medium max-w-2xl mx-auto mb-12 drop-shadow-md">
+          <p className="text-base md:text-xl text-warm-sand/90 font-medium max-w-2xl mx-auto mb-10 md:mb-12 drop-shadow-md">
             Don't let the adventure of a lifetime pass you by. Connect with our expert rangers today and secure your seat in the heart of the wild.
           </p>
 
@@ -65,7 +65,7 @@ export default function BookingCTA() {
 
             {/* The Echoing WhatsApp Button */}
             <a 
-              href="https://wa.me/94722112222"
+              href="https://wa.me/61416482262"
               target="_blank"
               rel="noopener noreferrer"
               className="relative group/wa w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-5 bg-white/10 backdrop-blur-md border border-white/30 text-white font-bold text-sm tracking-widest uppercase rounded-full overflow-hidden transition-all duration-300 transform hover:-translate-y-1 hover:bg-white/20 hover:border-white/50"

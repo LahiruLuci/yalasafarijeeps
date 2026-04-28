@@ -12,20 +12,17 @@ export default function ToursHero() {
   return (
     <section className="relative w-full min-h-[100svh] bg-deep-charcoal overflow-hidden flex flex-col pt-24">
 
-      {/* ── Background: 3-panel horizontal image composition ── */}
-      <div className="absolute inset-0 grid grid-cols-3 z-0 opacity-90">
-        <div className="relative overflow-hidden">
-          <Image src="/images/yala-national-park/yala-national-park-sri-lanka-image1.jpg" alt="Leopard" fill sizes="34vw" className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal/80 to-transparent" />
-        </div>
-        <div className="relative overflow-hidden">
-          <Image src="/images/yala-safari-accomodation-banner.jpg" alt="Kandy Temple" fill sizes="33vw" className="object-cover" priority />
-          <div className="absolute inset-0 bg-deep-charcoal/30" />
-        </div>
-        <div className="relative overflow-hidden">
-          <Image src="/images/yala-national-park/yala-national-park-sri-lanka-image7.jpg" alt="Yala Landscape" fill sizes="33vw" className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-l from-deep-charcoal/80 to-transparent" />
-        </div>
+      {/* ── Background: Single Hero Image ── */}
+      <div className="absolute inset-0 z-0 opacity-90">
+        <Image 
+          src="/images/tour-page-hero-image.webp" 
+          alt="Sri Lanka Expedition" 
+          fill 
+          sizes="100vw" 
+          className="object-cover" 
+          priority 
+        />
+        <div className="absolute inset-0 bg-deep-charcoal/40" />
       </div>
 
       {/* Full dark gradient bottom */}
@@ -35,7 +32,7 @@ export default function ToursHero() {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-sunset-gold/8 blur-[160px] z-10 pointer-events-none" />
 
       {/* ── Main Content ── */}
-      <div className="relative z-20 flex-1 flex flex-col justify-center max-w-7xl mx-auto px-4 md:px-8 w-full text-center pb-36 md:pb-28">
+      <div className="relative z-20 flex-1 flex flex-col justify-center max-w-7xl mx-auto px-4 md:px-8 w-full text-center pb-56 md:pb-28">
 
         {/* Eyebrow */}
         <div className="flex items-center justify-center gap-5 mb-10">

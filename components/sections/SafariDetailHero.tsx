@@ -66,7 +66,7 @@ export default function SafariDetailHero({ safari }: { safari: SafariPackage }) 
               Secure Your Slot
             </Link>
             <a
-              href="https://wa.me/94722112222"
+              href="https://wa.me/61416482262"
               target="_blank"
               rel="noopener noreferrer"
               className="px-12 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white font-black text-sm tracking-widest uppercase rounded-full hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-3"

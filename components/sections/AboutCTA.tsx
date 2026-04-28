@@ -47,7 +47,7 @@ export default function AboutCTA() {
         </div>
 
         {/* Giant Headline */}
-        <h2 className="text-6xl md:text-7xl lg:text-[7rem] font-black text-white leading-[0.95] tracking-tighter mb-10 max-w-5xl mx-auto">
+        <h2 className="text-4xl md:text-7xl lg:text-[7rem] font-black text-white leading-[0.95] tracking-tighter mb-10 max-w-5xl mx-auto">
           The Call of
           <br />
           <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-sunset-gold via-soft-beige to-sunset-gold inline-block">
@@ -79,7 +79,7 @@ export default function AboutCTA() {
 
           {/* WhatsApp CTA */}
           <a
-            href="https://wa.me/94722112222"
+            href="https://wa.me/61416482262"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-8 py-5 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold text-sm tracking-widest uppercase rounded-full hover:bg-white/20 hover:border-white/40 transition-all duration-300 transform hover:-translate-y-1"

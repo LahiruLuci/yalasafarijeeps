@@ -6,21 +6,21 @@ const categories = [
   {
     title: "Luxury Lodges",
     subtitle: "UNCOMPROMISED OPULENCE",
-    image: "/images/chena-huts/chena-hut-yala-national-park-top.jpg",
+    image: "/images/luxury-lodges.webp",
     description: "Architectural marvels nestled in the heart of the national park, where every detail is crafted for your absolute comfort.",
     features: ["Private Plunge Pools", "Personalized Butler Service", "All-Inclusive Dining"]
   },
   {
     title: "Safari Tents",
     subtitle: "AUTHENTIC GLAMPING",
-    image: "/images/leopard-nest/leopard-nest.jpg",
+    image: "/images/safari-tents.webp",
     description: "Experience the true essence of the wild from the safety of our custom-designed, luxury tented camps situated at the park boundaries.",
     features: ["Starlit Sleepouts", "Campfire Gastronomy", "Proximity to the Wild"]
   },
   {
     title: "Boutique Resorts",
     subtitle: "MODERN WILDERNESS",
-    image: "/images/rock-wild-yala/rock-wild-yala-home-1.jpg",
+    image: "/images/boutique-resorts.webp",
     description: "A fusion of contemporary design and natural textures, these resorts offer a secluded escape with a focus on relaxation and tranquility.",
     features: ["Thematic Designs", "Wellness & Spa", "Curated Experiences"]
   }

@@ -22,18 +22,18 @@ export default function MissionVision() {
         <span className="text-soft-beige font-black text-xl tracking-wider uppercase">Core</span>
       </div>
 
-      <div className="flex flex-col lg:flex-row h-[100vh] lg:h-[85vh] w-full overflow-hidden">
+      <div className="flex flex-col lg:flex-row min-h-screen lg:h-[85vh] w-full overflow-hidden">
         
         {/* === THE MISSION PANEL === */}
         <div 
           onMouseEnter={() => setHoveredPanel("mission")}
           onMouseLeave={() => setHoveredPanel(null)}
-          className={`relative h-1/2 lg:h-full transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden cursor-crosshair group ${getFlexClass("mission")}`}
+          className={`relative min-h-[50vh] lg:h-full transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden cursor-crosshair group ${getFlexClass("mission")}`}
         >
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="/images/yala-banner.jpg"
+              src="/images/our-mission-image.webp"
               alt="Our Mission"
               fill
               className="object-cover scale-110 group-hover:scale-100 transition-transform duration-[800ms] ease-out opacity-80"
@@ -45,12 +45,12 @@ export default function MissionVision() {
           <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-deep-charcoal via-deep-charcoal/80 to-transparent lg:to-deep-charcoal/40 transition-opacity duration-700" />
           
           {/* Content Container */}
-          <div className="absolute inset-0 p-8 md:p-16 lg:p-24 flex flex-col justify-end lg:justify-center">
+          <div className="relative lg:absolute lg:inset-0 p-8 md:p-16 lg:p-24 flex flex-col justify-end lg:justify-center z-10">
             <div className="transform transition-transform duration-700 lg:group-hover:-translate-y-4">
               <span className="inline-block px-4 py-1 border border-sunset-gold/50 text-sunset-gold font-bold text-xs tracking-[0.3em] uppercase rounded-full mb-6">
                 Our Mission
               </span>
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight whitespace-nowrap">
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
                 Pioneering <br/> <span className="text-sunset-gold">The Wild</span>
               </h2>
               
@@ -76,12 +76,12 @@ export default function MissionVision() {
         <div 
           onMouseEnter={() => setHoveredPanel("vision")}
           onMouseLeave={() => setHoveredPanel(null)}
-          className={`relative h-1/2 lg:h-full transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden cursor-crosshair group ${getFlexClass("vision")}`}
+          className={`relative min-h-[50vh] lg:h-full transition-all duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden cursor-crosshair group ${getFlexClass("vision")}`}
         >
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full">
             <Image
-              src="/images/projects/bundala-national-park-thum1.jpg"
+              src="/images/our-vision-image.webp"
               alt="Our Vision"
               fill
               className="object-cover scale-110 group-hover:scale-100 transition-transform duration-[800ms] ease-out opacity-80"
@@ -93,12 +93,12 @@ export default function MissionVision() {
           <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-olive-green via-olive-green/90 to-transparent lg:to-olive-green/40 transition-opacity duration-700" />
           
           {/* Content Container */}
-          <div className="absolute inset-0 p-8 md:p-16 lg:p-24 flex flex-col justify-start lg:justify-center lg:items-end lg:text-right">
+          <div className="relative lg:absolute lg:inset-0 p-8 md:p-16 lg:p-24 flex flex-col justify-start lg:justify-center lg:items-end lg:text-right z-10">
             <div className="transform transition-transform duration-700 lg:group-hover:-translate-y-4 flex flex-col lg:items-end">
               <span className="inline-block px-4 py-1 border border-soft-beige/50 text-soft-beige font-bold text-xs tracking-[0.3em] uppercase rounded-full mb-6">
                 Our Vision
               </span>
-              <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight whitespace-nowrap">
+              <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
                 Sustaining <br/> <span className="text-soft-beige/60">The Future</span>
               </h2>
               

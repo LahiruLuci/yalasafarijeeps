@@ -70,7 +70,7 @@ export default function StayList() {
             <span className="text-sunset-gold font-bold text-sm tracking-[0.4em] uppercase mb-6 block">
                Curated Collection
             </span>
-            <h2 className="text-5xl md:text-7xl font-extrabold text-deep-charcoal leading-none tracking-tight">
+            <h2 className="text-4xl md:text-7xl font-extrabold text-deep-charcoal leading-[1.1] tracking-tight">
                Our Recommended <br />
                <span className="italic text-olive-green font-light font-serif">Sanctuaries</span>
             </h2>

@@ -164,7 +164,7 @@ export default function ContactPreview() {
           </div>
 
           {/* Right Column - Map & Floating Contact Info */}
-          <div className="w-full lg:w-1/2 relative min-h-[400px] lg:min-h-full">
+          <div className="w-full lg:w-1/2 relative min-h-[500px] md:min-h-[600px] lg:min-h-full flex flex-col">
             {/* The Google Map iframe */}
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126938.86877028913!2d81.36506306540673!3d6.390099491689369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae5d105234125b3%3A0xeab50dcebcfe3fd6!2sYala%20National%20Park!5e0!3m2!1sen!2slk!4v1698765432100!5m2!1sen!2slk" 
@@ -174,12 +174,12 @@ export default function ContactPreview() {
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0"
+              className="absolute inset-0 h-1/2 md:h-full lg:h-full"
               title="Yala National Park Location Map"
             ></iframe>
 
             {/* Glassmorphism Floating Info Card */}
-            <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 bg-white/80 backdrop-blur-xl p-6 md:p-8 rounded-2xl shadow-2xl border border-white/50 flex flex-col gap-6">
+            <div className="relative md:absolute mt-auto md:mt-0 bottom-0 md:bottom-10 left-0 md:left-10 right-0 md:right-10 bg-white/90 md:bg-white/80 backdrop-blur-xl p-8 md:p-8 rounded-t-3xl md:rounded-2xl shadow-2xl border-t md:border border-white/50 flex flex-col gap-6 z-10">
               
               <div className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-full bg-olive-green text-soft-beige flex items-center justify-center flex-shrink-0 group-hover:bg-sunset-gold transition-colors">
@@ -202,7 +202,7 @@ export default function ContactPreview() {
                 </div>
                 <div>
                   <span className="block text-xs font-bold uppercase tracking-wider text-safari-brown/70 mb-0.5">Phone (24/7)</span>
-                  <a href="tel:+94722112222" className="block text-deep-charcoal font-bold hover:text-sunset-gold transition-colors">+94 72 211 22 22</a>
+                  <a href="tel:+61416482262" className="block text-deep-charcoal font-bold hover:text-sunset-gold transition-colors">+61 416 482 262</a>
                 </div>
               </div>
 
@@ -215,7 +215,7 @@ export default function ContactPreview() {
                 </div>
                 <div>
                   <span className="block text-xs font-bold uppercase tracking-wider text-safari-brown/70 mb-0.5">Email</span>
-                  <a href="mailto:info@yalasafarijeeps.com" className="block text-deep-charcoal font-bold hover:text-sunset-gold transition-colors">info@yalasafarijeeps.com</a>
+                  <a href="mailto:info@yalasafarijeeps.com" className="block text-deep-charcoal font-bold hover:text-sunset-gold transition-colors break-all md:break-normal">info@yalasafarijeeps.com</a>
                 </div>
               </div>
 

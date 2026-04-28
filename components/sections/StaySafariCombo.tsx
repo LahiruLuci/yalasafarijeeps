@@ -43,7 +43,7 @@ export default function StaySafariCombo() {
               <span className="text-sunset-gold font-bold text-sm tracking-[0.5em] uppercase mb-4 block">
                  Seamless Integration
               </span>
-              <h2 className="text-5xl md:text-7xl font-extrabold text-deep-charcoal leading-none tracking-tight mb-8">
+              <h2 className="text-4xl md:text-7xl font-extrabold text-deep-charcoal leading-[1.1] tracking-tight mb-8">
                  Complete Your <br />
                  <span className="italic text-olive-green font-light font-serif">Safari Circle</span>
               </h2>
@@ -98,12 +98,12 @@ export default function StaySafariCombo() {
                    <span className={`text-[10px] font-black tracking-[0.2em] uppercase mb-4 block ${pkg.isPopular ? 'text-sunset-gold' : 'text-olive-green'}`}>
                       {pkg.highlight}
                    </span>
-                   <h3 className="text-3xl md:text-4xl font-black mb-8 leading-tight tracking-tighter capitalize italic">
+                   <h3 className="text-2xl md:text-4xl font-black mb-8 leading-tight tracking-tighter capitalize italic">
                       {pkg.name}
                    </h3>
                    
                    <div className="mb-10 flex items-baseline gap-2">
-                      <span className="text-5xl font-black">{pkg.price}</span>
+                      <span className="text-4xl md:text-5xl font-black">{pkg.price}</span>
                       <span className="text-xs opacity-50 uppercase font-black">/ Person</span>
                    </div>
 

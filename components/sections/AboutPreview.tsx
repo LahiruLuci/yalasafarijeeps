@@ -47,7 +47,7 @@ export default function AboutPreview() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs text-safari-brown uppercase tracking-widest font-bold">24/7 Support</span>
-                  <a href="tel:+94722112222" className="text-deep-charcoal font-bold text-lg hover:text-sunset-gold transition-colors">+94 72 211 22 22</a>
+                  <a href="tel:+61416482262" className="text-deep-charcoal font-bold text-lg hover:text-sunset-gold transition-colors">+61 416 482 262</a>
                 </div>
               </div>
             </div>

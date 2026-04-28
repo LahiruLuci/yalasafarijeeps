@@ -121,7 +121,7 @@ export default function SafariIntro() {
         </div>
 
         {/* Bottom Full-Width Proof Strip */}
-        <div className="w-full rounded-[2rem] overflow-hidden relative h-64 md:h-80 shadow-2xl group">
+        <div className="w-full rounded-[2rem] overflow-hidden relative min-h-[300px] md:h-80 shadow-2xl group flex items-center">
           <Image
             src="/images/yala-national-park/yala-national-park-sri-lanka-image7.jpg"
             alt="Yala National Park Landscape"
@@ -130,10 +130,10 @@ export default function SafariIntro() {
             className="object-cover group-hover:scale-105 transition-transform duration-[15s] ease-out"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal/80 via-deep-charcoal/30 to-transparent" />
-          <div className="absolute inset-0 flex items-center px-10 md:px-16">
+          <div className="absolute inset-0 flex items-center px-8 md:px-16 py-12 md:py-0">
             <div className="max-w-xl">
               <span className="text-sunset-gold font-bold text-xs tracking-[0.3em] uppercase block mb-3">Sri Lanka's Crown Jewel</span>
-              <p className="text-2xl md:text-3xl font-extrabold text-white leading-tight">
+              <p className="text-xl md:text-3xl font-extrabold text-white leading-tight">
                 A UNESCO World Heritage Site & global leopard sanctuary — all in one extraordinary destination.
               </p>
             </div>

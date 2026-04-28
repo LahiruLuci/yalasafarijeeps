@@ -66,7 +66,7 @@ export default function ContactMap() {
                  />
                  
                  {/* Floating Map Label */}
-                 <div className="absolute top-10 right-10 py-4 px-10 rounded-full bg-white/80 backdrop-blur-3xl shadow-xl z-20 border border-white/20">
+                 <div className="absolute top-6 right-6 md:top-10 md:right-10 py-3 md:py-4 px-6 md:px-10 rounded-full bg-white/80 backdrop-blur-3xl shadow-xl z-20 border border-white/20">
                     <div className="flex items-center gap-3">
                        <div className="w-2 h-2 rounded-full bg-sunset-gold animate-ping" />
                        <span className="text-deep-charcoal font-black text-[10px] tracking-widest uppercase">YALA BASE SITE</span>

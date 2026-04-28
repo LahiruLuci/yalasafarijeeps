@@ -15,8 +15,8 @@ export default function StayExperience() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
           {/* ── Left Side: Asymmetric Image Montage ── */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative group overflow-hidden rounded-[4rem] shadow-2xl h-[500px] md:h-[650px] w-full lg:w-[90%] transform -rotate-3 hover:rotate-0 transition-transform duration-1000">
+          <div className="lg:col-span-6 relative mb-24 lg:mb-0">
+            <div className="relative group overflow-hidden rounded-[3rem] md:rounded-[4rem] shadow-2xl h-[450px] md:h-[650px] w-full lg:w-[90%] transform -rotate-2 md:-rotate-3 hover:rotate-0 transition-transform duration-1000">
               <Image
                 src="/images/chena-huts/chena-hut-yala-national-park-top.jpg"
                 alt="Luxury Tent Setup at Chena Huts"
@@ -27,7 +27,7 @@ export default function StayExperience() {
             </div>
 
             {/* Floating Inset Image */}
-            <div className="absolute -bottom-12 -right-8 md:-right-12 w-[240px] md:w-[320px] h-[340px] md:h-[450px] rounded-[3rem] overflow-hidden shadow-[-40px_40px_80px_rgba(43,42,34,0.3)] border-[10px] border-warm-sand group transform rotate-6 hover:rotate-3 transition-transform duration-1000 z-20">
+            <div className="absolute -bottom-10 -right-4 md:-right-12 w-[180px] sm:w-[240px] md:w-[320px] h-[260px] sm:h-[340px] md:h-[450px] rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[-20px_20px_40px_rgba(43,42,34,0.2)] md:shadow-[-40px_40px_80px_rgba(43,42,34,0.3)] border-[6px] md:border-[10px] border-warm-sand group transform rotate-3 md:rotate-6 hover:rotate-0 transition-transform duration-1000 z-20">
                <Image
                  src="/images/cinnamon-wild/cinnamon-wild-home-1.jpg"
                  alt="Wilderness Pool Experience at Cinnamon Wild"

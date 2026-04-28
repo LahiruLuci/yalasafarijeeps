@@ -85,7 +85,7 @@ export default function CompanyStory() {
                     <div className="absolute inset-0 bg-deep-charcoal/20 group-hover:bg-transparent transition-colors duration-700" />
                     
                     {/* The Giant Year Watermark strictly hovering over the image */}
-                    <div className={`absolute -bottom-8 ${isEven ? "-right-8" : "-left-8"} text-[8rem] font-black text-white/50 leading-none drop-shadow-2xl mix-blend-overlay pointer-events-none`}>
+                    <div className={`absolute -bottom-4 md:-bottom-8 ${isEven ? "right-4 md:-right-8 text-right" : "left-4 md:-left-8 text-left"} text-6xl md:text-[8rem] font-black text-white/50 leading-none drop-shadow-2xl mix-blend-overlay pointer-events-none`}>
                       {chapter.year}
                     </div>
                   </div>

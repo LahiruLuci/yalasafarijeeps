@@ -19,6 +19,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [mobileMenuOpen]);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
@@ -29,7 +40,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header
+    <>
+      <header
       className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-olive-green/95 backdrop-blur-md shadow-md py-3"
@@ -96,42 +108,77 @@ export default function Navbar() {
           <div className={`w-6 h-0.5 mb-1.5 transition-all ${isScrolled || mobileMenuOpen ? 'bg-soft-beige' : 'bg-white'} ${mobileMenuOpen ? 'opacity-0' : ''}`}></div>
           <div className={`w-6 h-0.5 transition-all ${isScrolled || mobileMenuOpen ? 'bg-soft-beige' : 'bg-white'} ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
         </button>
-
-        {/* Mobile Navigation */}
-        <div
-          className={`fixed inset-0 bg-safari-brown z-40 transition-transform duration-300 ease-in-out flex flex-col justify-center items-center ${
-            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
-          } lg:hidden`}
-        >
-          <nav className="flex flex-col items-center gap-8">
-            {navLinks.map((link) => {
-              const isActive = link.href === "/" 
-                ? pathname === "/" 
-                : pathname.startsWith(link.href);
-
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`text-2xl font-bold transition-all ${
-                    isActive ? "text-sunset-gold" : "text-soft-beige hover:text-sunset-gold"
-                  }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-            <Link
-              href="/booking"
-              className="mt-4 bg-sunset-gold text-soft-beige px-8 py-3 rounded text-lg font-bold uppercase tracking-wider"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Book Now
-            </Link>
-          </nav>
-        </div>
       </div>
     </header>
+
+    {/* Mobile Navigation - Moved outside header to avoid stacking/blur conflicts */}
+    <div
+      className={`fixed inset-0 bg-[#3E3B2F] z-[100] transition-all duration-500 ease-in-out flex flex-col ${
+        mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"
+      } lg:hidden`}
+    >
+      {/* Mobile Menu Header */}
+      <div className="flex justify-between items-center px-6 py-6 w-full border-b border-white/10 bg-[#3E3B2F]">
+         <div className="relative w-32 h-10">
+            <Image
+              src="/images/logo-2.png"
+              alt="Yala Safari Jeeps Logo"
+              fill
+              sizes="128px"
+              className="object-contain brightness-0 invert"
+            />
+         </div>
+         <button 
+           onClick={() => setMobileMenuOpen(false)}
+           className="text-soft-beige p-2 hover:text-sunset-gold transition-colors"
+         >
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+               <line x1="18" y1="6" x2="6" y2="18"></line>
+               <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+         </button>
+      </div>
+
+      <nav className="flex-1 flex flex-col items-center justify-center gap-6 px-6 py-10 overflow-y-auto w-full bg-[#3E3B2F]">
+        {navLinks.map((link, idx) => {
+          const isActive = link.href === "/" 
+            ? pathname === "/" 
+            : pathname.startsWith(link.href);
+
+          return (
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`text-2xl font-black uppercase tracking-tight transition-all ${
+                isActive ? "text-sunset-gold scale-110" : "text-soft-beige hover:text-sunset-gold"
+              }`}
+              style={{ transitionDelay: `${idx * 50}ms` }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </Link>
+          );
+        })}
+        
+        <Link
+          href="/booking"
+          className="mt-6 bg-sunset-gold text-deep-charcoal px-10 py-4 rounded-full text-base font-black uppercase tracking-widest shadow-[0_20px_50px_rgba(208,122,63,0.3)] hover:scale-105 active:scale-95 transition-all"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          Book Now
+        </Link>
+
+        {/* Mobile Menu Footer Info */}
+        <div className="mt-auto w-full border-t border-white/5 pt-10 pb-8 flex flex-col items-center gap-4 bg-[#3E3B2F]">
+           <p className="text-warm-sand/40 text-[10px] font-bold uppercase tracking-[0.4em]">
+              Contact our Experts
+           </p>
+           <a href="tel:+61416482262" className="text-soft-beige text-xl font-bold tracking-widest hover:text-sunset-gold transition-colors">
+              +61 416 482 262
+           </a>
+        </div>
+      </nav>
+    </div>
+  </>
   );
 }

@@ -76,9 +76,10 @@ export default function ContactDetails() {
               <div className="bg-deep-charcoal p-12 md:p-14 border-l border-white/5 hover:bg-white/[0.02] transition-colors flex flex-col justify-between group/card">
                  <div>
                     <span className="text-sunset-gold font-black text-[9px] tracking-[0.4em] uppercase mb-8 block">DIRECT LINES</span>
-                    <p className="text-soft-beige font-black text-xl mb-2 tracking-tight">+94 77 123 4567</p>
-                    <p className="text-soft-beige font-black text-xl mb-6 tracking-tight">+94 47 987 6543</p>
-                    <p className="text-warm-sand/40 text-base italic">hello@yalasafari.com</p>
+                    <p className="text-soft-beige font-black text-xl mb-6 tracking-tight">+61 416 482 262</p>
+                    <p className="text-warm-sand/40 text-base italic">
+                       <a href="mailto:info@yalasafarijeeps.com" className="hover:text-sunset-gold transition-colors">info@yalasafarijeeps.com</a>
+                    </p>
                  </div>
                  <div className="mt-10 w-8 h-8 rounded-full border border-sunset-gold/30 flex items-center justify-center text-sunset-gold">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>

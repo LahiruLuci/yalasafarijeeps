@@ -79,7 +79,7 @@ export default function SafariBookingCTA({ safari }: { safari: SafariPackage }) 
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/94722112222"
+                href="https://wa.me/61416482262"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex-1 flex flex-col items-center justify-center gap-2 bg-[#25D366] text-white rounded-2xl px-6 py-6 font-black text-sm tracking-widest uppercase text-center hover:bg-[#1da851] transition-colors duration-300 shadow-xl"
@@ -93,7 +93,7 @@ export default function SafariBookingCTA({ safari }: { safari: SafariPackage }) 
 
             {/* Call Strip */}
             <a
-              href="tel:+94722112222"
+              href="tel:+61416482262"
               className="group flex items-center justify-between gap-4 p-5 rounded-2xl border-2 border-dashed border-deep-charcoal/20 hover:border-sunset-gold hover:bg-warm-sand/30 transition-all duration-300"
             >
               <div className="flex items-center gap-4">

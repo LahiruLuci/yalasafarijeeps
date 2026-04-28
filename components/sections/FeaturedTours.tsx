@@ -9,7 +9,7 @@ const tours = [
     title: "Immersive Multi-Day Expeditions",
     subtitle: "Comprehensive Journeys",
     description: "Experience the ultimate Sri Lankan adventure. Our pre-designed multi-day tours seamlessly blend ancient cultural heritage, breathtaking hill country train rides, and exhilarating wildlife safaris into one unforgettable expedition.",
-    image: "/images/new-images/ella-image.webp",
+    image: "/images/new-images/ella.webp",
     features: ["Pre-planned Itineraries", "Luxury Stays", "Island Wide Coverage"],
     href: "/tours",
     align: "left",
@@ -50,7 +50,7 @@ export default function FeaturedTours() {
             <Link 
               href={tour.href}
               key={tour.id}
-              className="group relative h-[620px] md:h-[720px] w-full rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 block cursor-pointer"
+              className="group relative min-h-[550px] md:h-[720px] w-full rounded-[2rem] md:rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 flex flex-col md:block cursor-pointer"
             >
               {/* Full Width Background Image */}
               <div className="absolute inset-0">
@@ -67,9 +67,9 @@ export default function FeaturedTours() {
               <div className="absolute inset-0 bg-black/20" />
               <div className={`absolute inset-0 bg-gradient-to-${tour.align === 'left' ? 'r' : 'l'} from-deep-charcoal/90 via-deep-charcoal/60 to-transparent`} />
 
-              {/* Glassmorphism Content Panel */}
+              {/* Content Panel */}
               <div 
-                className={`absolute inset-y-0 ${tour.align === 'left' ? 'left-0' : 'right-0'} w-full md:w-3/5 lg:w-1/2 px-8 py-12 md:px-16 md:py-20 flex flex-col justify-center`}
+                className={`relative md:absolute md:inset-y-0 ${tour.align === 'left' ? 'left-0' : 'right-0'} w-full md:w-3/5 lg:w-1/2 px-8 py-16 md:px-16 md:py-20 flex flex-col justify-center z-20`}
               >
                 <div className={`relative z-10 ${tour.align === 'left' ? 'md:pr-12' : 'md:pl-12'} transform transition-all duration-700 group-hover:-translate-y-2`}>
                   
@@ -79,7 +79,7 @@ export default function FeaturedTours() {
                     </span>
                   </div>
                   
-                  <h3 className="text-4xl md:text-5xl font-extrabold text-soft-beige mb-6 leading-tight text-shadow-sm">
+                  <h3 className="text-3xl md:text-5xl font-extrabold text-soft-beige mb-6 leading-tight text-shadow-sm">
                     {tour.title}
                   </h3>
                   

@@ -8,7 +8,7 @@ export default function AboutPageHero() {
       
       {/* Background Giant Watermark Typography */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center pointer-events-none z-0 mix-blend-overlay opacity-10">
-        <h1 className="text-[15vw] font-black tracking-tighter text-white whitespace-nowrap leading-none">
+        <h1 className="text-[15vw] font-black tracking-tighter text-white leading-none">
           WILDERNESS
         </h1>
       </div>
