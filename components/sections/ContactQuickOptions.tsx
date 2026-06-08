@@ -5,6 +5,7 @@ const contactMethods = [
       name: "WhatsApp",
       label: "INSTANT CHAT",
       value: "+61 416 482 262",
+      href: "https://wa.me/61416482262",
       desc: "Average response: < 5 mins",
       icon: (
          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-sunset-gold">
@@ -17,6 +18,7 @@ const contactMethods = [
       name: "Direct Call",
       label: "VOICE SUPPORT",
       value: "+61 416 482 262",
+      href: "tel:+61416482262",
       desc: "Available for urgent booking",
       icon: (
          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-sunset-gold">
@@ -28,7 +30,8 @@ const contactMethods = [
    {
       name: "Official Email",
       label: "INQUIRY DESK",
-      value: "hello@yalasafari.com",
+      value: "info@yalasafarijeeps.com",
+      href: "mailto:info@yalasafarijeeps.com",
       desc: "Detailed itineraries & quotes",
       icon: (
          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-sunset-gold">
@@ -65,11 +68,14 @@ export default function ContactQuickOptions() {
             {/* ── The Quick Option Grid ── */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                {contactMethods.map((method, idx) => (
-                  <button
+                  <a
                      key={idx}
+                     href={method.href}
+                     target={method.name === "Official Email" ? "_self" : "_blank"}
+                     rel="noopener noreferrer"
                      className={`group relative p-10 md:p-14 rounded-[3.5rem] transition-all duration-700 text-left flex flex-col justify-between min-h-[380px] overflow-hidden ${method.isPrimary
-                           ? 'bg-deep-charcoal text-soft-beige shadow-[0_40px_100px_rgba(43,42,34,0.15)] border-2 border-sunset-gold/20'
-                           : 'bg-white/50 border border-white/80 hover:bg-white/80 backdrop-blur-3xl'
+                        ? 'bg-deep-charcoal text-soft-beige shadow-[0_40px_100px_rgba(43,42,34,0.15)] border-2 border-sunset-gold/20'
+                        : 'bg-white/50 border border-white/80 hover:bg-white/80 backdrop-blur-3xl'
                         }`}
                   >
                      {/* Secondary Hover Gradient */}
@@ -112,7 +118,7 @@ export default function ContactQuickOptions() {
 
                      {/* Ambient Detail on Hover */}
                      <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-sunset-gold/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </button>
+                  </a>
                ))}
             </div>
 

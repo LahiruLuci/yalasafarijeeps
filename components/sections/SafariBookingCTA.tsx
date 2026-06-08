@@ -103,7 +103,7 @@ export default function SafariBookingCTA({ safari }: { safari: SafariPackage }) 
                   </svg>
                 </div>
                 <div>
-                  <span className="block text-xs font-bold uppercase tracking-widest text-safari-brown/50 mb-0.5">Call Us 24/7</span>
+                  <span className="block text-xs font-bold uppercase tracking-widest text-safari-brown/50 mb-0.5">Global Inquiries</span>
                   <span className="block text-lg font-extrabold text-deep-charcoal group-hover:text-sunset-gold transition-colors">+61 416 482 262</span>
                 </div>
               </div>

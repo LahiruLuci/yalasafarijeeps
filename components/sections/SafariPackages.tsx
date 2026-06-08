@@ -33,6 +33,8 @@ const packages = [
   },
 ];
 
+import { trackEvent } from "@/lib/analytics";
+
 export default function SafariPackages() {
   return (
     <section className="bg-warm-sand py-20 lg:py-28 text-deep-charcoal relative">
@@ -54,6 +56,12 @@ export default function SafariPackages() {
             <Link
               key={pkg.id}
               href={pkg.href}
+              data-event="select_item"
+              onClick={() => trackEvent("select_item", {
+                item_list_name: "home_packages",
+                item_name: pkg.title,
+                item_category: "safari_package"
+              })}
               className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col transform hover:-translate-y-2"
             >
               <div className="relative h-64 overflow-hidden">
@@ -94,14 +102,14 @@ export default function SafariPackages() {
             </Link>
           ))}
         </div>
-        
+
         <div className="mt-16 text-center">
-            <Link
-                href="/safari"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-deep-charcoal text-soft-beige font-bold text-sm tracking-[0.2em] uppercase rounded hover:bg-olive-green transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-            >
-                View All Safaris
-            </Link>
+          <Link
+            href="/safari"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-deep-charcoal text-soft-beige font-bold text-sm tracking-[0.2em] uppercase rounded hover:bg-olive-green transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+          >
+            View All Safaris
+          </Link>
         </div>
       </div>
     </section>

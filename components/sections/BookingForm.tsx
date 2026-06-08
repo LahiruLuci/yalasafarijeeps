@@ -1,23 +1,21 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
 
-const safariTypeMap: Record<string, string> = {
-  "morning": "Morning Safari",
-  "evening": "Evening Safari",
-  "full-day": "Full Day Safari",
-  "special": "Custom Safari / Not Sure Yet"
+type BookingFormProps = {
+  initialPackage?: string;
 };
 
-function BookingFormInner() {
-  const searchParams = useSearchParams();
+import { trackEvent } from "@/lib/analytics";
+
+function BookingFormInner({ initialPackage = "" }: BookingFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [hasStarted, setHasStarted] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     whatsapp: "",
     email: "",
-    package: "Morning Safari",
+    package: initialPackage || "Morning Safari",
     date: "",
     adults: "2",
     children: "0",
@@ -29,13 +27,20 @@ function BookingFormInner() {
 
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  // Autofill Safari Package from URL
-  useEffect(() => {
-    const type = searchParams.get("type");
-    if (type && safariTypeMap[type]) {
-      setFormData(prev => ({ ...prev, package: safariTypeMap[type] }));
+  // Track the first interaction with the form
+  const handleFormStart = () => {
+    if (!hasStarted) {
+      trackEvent("booking_form_start", { page_path: window.location.pathname });
+      setHasStarted(true);
     }
-  }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
+  };
+
+  // Autofill Safari Package from props
+  useEffect(() => {
+    if (initialPackage) {
+      setFormData(prev => ({ ...prev, package: initialPackage }));
+    }
+  }, [initialPackage]);
 
   const today = new Date().toISOString().split("T")[0];
 
@@ -77,6 +82,12 @@ Please confirm availability.`;
 
   const handleWhatsAppSubmit = () => {
     if (!validate()) return;
+    trackEvent("generate_lead", {
+      lead_type: "booking",
+      safari_package: formData.package.toLowerCase().replace(/\s+/g, '_'),
+      contact_method: "whatsapp",
+      page_path: window.location.pathname
+    });
     window.open(generateWhatsAppHref(), '_blank');
     setStatus("success");
   };
@@ -85,8 +96,17 @@ Please confirm availability.`;
     e.preventDefault();
     if (!validate()) return;
     setStatus("submitting");
-    // Here you would normally send to an API
-    setTimeout(() => setStatus("success"), 1500);
+
+    // Simulate API call
+    setTimeout(() => {
+      trackEvent("generate_lead", {
+        lead_type: "booking",
+        safari_package: formData.package.toLowerCase().replace(/\s+/g, '_'),
+        contact_method: "form",
+        page_path: window.location.pathname
+      });
+      setStatus("success");
+    }, 1500);
   };
 
   if (status === "success") {
@@ -106,6 +126,8 @@ Please confirm availability.`;
             href={generateWhatsAppHref()}
             target="_blank"
             rel="noopener noreferrer"
+            data-event="whatsapp_click"
+            onClick={() => trackEvent("whatsapp_click", { location: "booking_success_page" })}
             className="bg-[#25D366] text-white px-10 py-5 rounded-2xl font-black text-sm tracking-widest uppercase shadow-xl hover:scale-105 transition-all"
           >
             Chat Now on WhatsApp
@@ -129,6 +151,7 @@ Please confirm availability.`;
               type="text"
               placeholder="John Doe"
               value={formData.fullName}
+              onFocus={handleFormStart}
               onChange={e => setFormData({ ...formData, fullName: e.target.value })}
               className={`w-full bg-warm-sand/5 border ${errors.fullName ? 'border-red-400' : 'border-warm-sand/50'} rounded-2xl px-6 py-4 outline-none focus:border-sunset-gold transition-all font-medium text-lg`}
             />
@@ -142,6 +165,7 @@ Please confirm availability.`;
               type="tel"
               placeholder="+1 234 567 890"
               value={formData.whatsapp}
+              onFocus={handleFormStart}
               onChange={e => setFormData({ ...formData, whatsapp: e.target.value })}
               className={`w-full bg-warm-sand/5 border ${errors.whatsapp ? 'border-red-400' : 'border-warm-sand/50'} rounded-2xl px-6 py-4 outline-none focus:border-sunset-gold transition-all font-medium text-lg`}
             />
@@ -157,6 +181,7 @@ Please confirm availability.`;
               type="email"
               placeholder="john@example.com"
               value={formData.email}
+              onFocus={handleFormStart}
               onChange={e => setFormData({ ...formData, email: e.target.value })}
               className={`w-full bg-warm-sand/5 border ${errors.email ? 'border-red-400' : 'border-warm-sand/50'} rounded-2xl px-6 py-4 outline-none focus:border-sunset-gold transition-all font-medium text-lg`}
             />
@@ -293,12 +318,20 @@ Please confirm availability.`;
           </button>
           <p className="text-[10px] text-center text-safari-brown/40 font-black uppercase tracking-[0.2em]">No instant payment required — we verify availability first</p>
         </div>
+
+        <noscript>
+          <div className="mt-8 p-6 bg-red-50 text-red-800 rounded-2xl border border-red-200 font-medium text-center">
+            JavaScript is disabled. For prompt booking, please contact us directly via WhatsApp:
+            <a href="https://wa.me/61416482262" className="block mt-2 font-black text-lg underline">+61 416 482 262</a>
+            or email us at <a href="mailto:info@yalasafarijeeps.com" className="font-black underline">info@yalasafarijeeps.com</a>
+          </div>
+        </noscript>
       </form>
     </div>
   );
 }
 
-export default function BookingForm() {
+export default function BookingForm({ initialPackage = "" }: BookingFormProps) {
   return (
     <section id="booking-form" className="bg-white py-24 md:py-32 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -306,9 +339,7 @@ export default function BookingForm() {
 
           {/* Left Column: Form */}
           <div className="lg:col-span-7">
-            <Suspense fallback={<div className="h-[800px] flex items-center justify-center bg-warm-sand/10 rounded-[3rem] text-safari-brown/40 font-bold uppercase tracking-widest">Warming the Jeep...</div>}>
-              <BookingFormInner />
-            </Suspense>
+            <BookingFormInner initialPackage={initialPackage} />
           </div>
 
           {/* Right Column: Trust Card & Info */}

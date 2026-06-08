@@ -10,8 +10,8 @@ import StaySafariCombo from "../../components/sections/StaySafariCombo";
 import StayFAQ from "../../components/sections/StayFAQ";
 
 export const metadata: Metadata = {
-  title: "Places to Stay Near Yala National Park | Safari Lodges & Hotels",
-  description: "Experience the ultimate night-sky wilderness retreat. Discover luxury lodges, boutique resorts, and authentic safari tents near Yala National Park.",
+  title: "Places to Stay Near Yala National Park",
+  description: "Find the best lodges, boutique resorts, and safari camps near Yala National Park, Sri Lanka. Book your stay alongside your private safari.",
   alternates: {
     canonical: "https://yalasafarijeeps.com/stay",
   },

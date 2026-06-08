@@ -3,14 +3,14 @@ import SafariIntro from "@/components/sections/SafariIntro";
 import SafariTypesList from "@/components/sections/SafariTypesList";
 
 export const metadata = {
-  title: "Yala Safari Packages | Morning, Evening & Full Day Jeep Safaris",
-  description: "Explore our range of premium Yala safari packages — from morning half-day expeditions to golden hour evening tours and full-day private safaris in Yala National Park.",
+  title: "Yala Safari Packages",
+  description: "Compare morning, evening, and full-day Yala safari jeep packages. Private 4x4 safaris with hotel pickup, local expert guides, and WhatsApp confirmation.",
   alternates: {
     canonical: "https://yalasafarijeeps.com/safari",
   },
   openGraph: {
-    title: "Yala Safari Packages | Premium Wildlife Experiences",
-    description: "Choose from morning, evening, and full-day safari packages in Yala National Park. Book your private 4x4 expedition with expert trackers today.",
+    title: "Yala Safari Packages | Morning, Evening & Full Day",
+    description: "Compare morning, evening, and full-day Yala safari jeep packages with private 4x4 and hotel pickup.",
   },
 };
 

@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { trackEvent } from "@/lib/analytics";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Wind, Zap } from "lucide-react";
 
@@ -168,6 +169,12 @@ export default function Hero() {
               <div className="flex flex-wrap items-center gap-6">
                 <Link
                   href="/safari"
+                  data-event="select_item"
+                  onClick={() => trackEvent("select_item", {
+                    item_list_name: "home_hero",
+                    item_name: "Discover The Wild",
+                    item_category: "safari_explore"
+                  })}
                   className="group relative overflow-hidden bg-sunset-gold px-10 py-5 rounded-full text-deep-charcoal font-black text-sm tracking-widest transition-all hover:scale-110 active:scale-95 flex items-center gap-4 shadow-[0_0_40px_rgba(208,122,63,0.3)]"
                 >
                   DISCOVER THE WILD
@@ -176,6 +183,8 @@ export default function Hero() {
 
                 <Link
                   href="/booking"
+                  data-event="book_now_click"
+                  onClick={() => trackEvent("book_now_click", { location: "hero" })}
                   className="text-white hover:text-sunset-gold font-bold text-sm tracking-widest border-b-2 border-white/20 pb-1 transition-all flex items-center gap-3"
                 >
                   SECURE A JEEP

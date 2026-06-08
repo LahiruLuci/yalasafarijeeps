@@ -88,7 +88,9 @@ export default function ContactHero() {
                         </div>
                         <div>
                            <p className="text-soft-beige font-black text-sm uppercase tracking-widest mb-1">Direct Line</p>
-                           <p className="text-warm-sand/40 font-medium">+61 416 482 262</p>
+                           <p className="text-warm-sand/40 font-medium hover:text-sunset-gold transition-colors">
+                              <a href="tel:+61416482262">+61 416 482 262</a>
+                           </p>
                         </div>
                      </div>
 

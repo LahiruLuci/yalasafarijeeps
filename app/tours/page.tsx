@@ -3,14 +3,14 @@ import ToursList from "@/components/sections/ToursList";
 import TourHighlights from "@/components/sections/TourHighlights";
 
 export const metadata = {
-  title: "Sri Lanka Wildlife & Safari Tours | Yala Safari Jeeps",
-  description: "Discover our premium multi-day Sri Lanka safari and wildlife tour packages. Combine Yala National Park safaris with iconic destinations like Ella, Kandy, and Galle.",
+  title: "Sri Lanka Wildlife & Safari Tours",
+  description: "Discover multi-day Sri Lanka safari and wildlife tour packages. Combine Yala National Park safaris with Ella, Kandy, and Galle.",
   alternates: {
     canonical: "https://yalasafarijeeps.com/tours",
   },
   openGraph: {
-    title: "Sri Lanka Wildlife & Safari Tours | Yala Safari Jeeps",
-    description: "Multi-day Sri Lanka expedition packages — from jungle safaris at Yala to the heritage of Kandy and the coastal beauty of Galle.",
+    title: "Sri Lanka Wildlife & Safari Tours",
+    description: "Multi-day Sri Lanka safari packages — jungle safaris at Yala, heritage in Kandy, and the coastal beauty of Galle.",
   },
 };
 

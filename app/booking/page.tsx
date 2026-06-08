@@ -6,35 +6,48 @@ import FinalBookingCTA from "@/components/sections/FinalBookingCTA";
 import Testimonials from "@/components/sections/Testimonials";
 
 export const metadata = {
-  title: "Book Yala Safari Jeep | Private Safari Reservation",
-  description: "Reserve your private 4x4 safari at Yala National Park. Choose your package, date, and pickup location — no payment required now.",
+  title: "Book Your Yala Safari Jeep",
+  description: "Send your Yala safari booking request with package, date, pickup location, and traveler details. No payment required — we confirm availability by WhatsApp.",
   alternates: {
     canonical: "https://yalasafarijeeps.com/booking",
   },
 };
 
-export default function BookingPage() {
+const safariTypeMap: Record<string, string> = {
+  "morning": "Morning Safari",
+  "evening": "Evening Safari",
+  "full-day": "Full Day Safari",
+  "special": "Custom Safari / Not Sure Yet"
+};
+
+export default async function BookingPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ type?: string }>;
+}) {
+  const resolvedParams = await searchParams;
+  const type = resolvedParams.type;
+  const initialPackage = type ? safariTypeMap[type] : "";
+
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex-grow w-full">
-        {/* 1. Booking Page Hero */}
-        <BookingHero />
+    <>
+      {/* 1. Booking Page Hero */}
+      <BookingHero />
 
-        {/* 2. Direct Booking Form Section with Trust Card */}
-        <BookingForm />
+      {/* 2. Direct Booking Form Section with Trust Card */}
+      <BookingForm initialPackage={initialPackage} />
 
-        {/* 3. How Booking Works */}
-        <HowBookingWorks />
+      {/* 3. How Booking Works */}
+      <HowBookingWorks />
 
-        {/* 4. Guest Testimonials for Social Proof */}
-        <Testimonials />
+      {/* 4. Guest Testimonials for Social Proof */}
+      <Testimonials />
 
-        {/* 5. FAQ Section */}
-        <BookingFAQ />
+      {/* 5. FAQ Section */}
+      <BookingFAQ />
 
-        {/* 6. Final Engagement CTA */}
-        <FinalBookingCTA />
-      </main>
-    </div>
+      {/* 6. Final Engagement CTA */}
+      <FinalBookingCTA />
+    </>
   );
 }

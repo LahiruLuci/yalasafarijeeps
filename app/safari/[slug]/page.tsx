@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!safari) return {};
 
   const titleMap: Record<string, string> = {
-    'morning': 'Morning Yala Safari | Private Jeep Tour with Hotel Pickup',
-    'evening': 'Evening Yala Safari | Golden Hour Wildlife Jeep Tour',
-    'full-day': 'Full Day Yala Safari | Private Leopard Safari Experience'
+    'morning': 'Morning Yala Safari Jeep Tour',
+    'evening': 'Evening Yala Safari Jeep Tour',
+    'full-day': 'Full Day Yala Safari Jeep Tour'
   };
 
-  const seoTitle = titleMap[slug] || `${safari.title} | Yala Safari Jeeps`;
+  const seoTitle = titleMap[slug] || safari.title;
 
   return {
     title: seoTitle,
