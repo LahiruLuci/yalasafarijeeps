@@ -50,9 +50,9 @@ export default function Navbar() {
           : "bg-transparent py-5"
           }`}
       >
-        <div className="max-w-[1600px] mx-auto px-4 md:pl-6 md:pr-12 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 md:px-10 flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="relative z-50 -ml-2 md:-ml-4">
+          <Link href="/" className="relative z-50">
             <div className="flex items-center">
               <div className={`relative transition-all duration-300 ${isScrolled
                 ? "w-15 h-15 md:w-18 md:h-18"
