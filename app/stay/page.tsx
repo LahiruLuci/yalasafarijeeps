@@ -10,10 +10,10 @@ import StaySafariCombo from "../../components/sections/StaySafariCombo";
 import StayFAQ from "../../components/sections/StayFAQ";
 
 export const metadata: Metadata = {
-  title: "Stay Under the Stars | Yala Luxury Accommodations",
+  title: "Places to Stay Near Yala National Park | Safari Lodges & Hotels",
   description: "Experience the ultimate night-sky wilderness retreat. Discover luxury lodges, boutique resorts, and authentic safari tents near Yala National Park.",
   alternates: {
-    canonical: "/stay",
+    canonical: "https://yalasafarijeeps.com/stay",
   },
 };
 

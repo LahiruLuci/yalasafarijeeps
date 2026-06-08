@@ -8,7 +8,7 @@ export default function AboutPreview() {
     <section className="bg-warm-sand/30 py-24 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          
+
           {/* Text Content */}
           <div className="w-full lg:w-1/2 order-2 lg:order-1 relative z-10">
             <span className="text-sunset-gold font-bold text-sm tracking-[0.3em] uppercase mb-4 block">
@@ -16,13 +16,13 @@ export default function AboutPreview() {
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-deep-charcoal mb-8 leading-tight">
               Passionate About <br />
-              <span className="text-olive-green">Yala's Wilderness</span>
+              <span className="text-olive-green">Yala&apos;s Wilderness</span>
             </h2>
-            
+
             <p className="text-lg text-safari-brown/80 font-medium leading-relaxed mb-6">
               At **Yala Safari Jeeps**, we are more than just a tour operator; we are your dedicated companions in exploring the untamed beauty of Sri Lanka. Nestled on the edge of the world-renowned Yala National Park, we specialize in providing unforgettable wildlife encounters.
             </p>
-            
+
             <p className="text-lg text-safari-brown/80 font-medium leading-relaxed mb-10">
               Whether you are tracking the elusive Sri Lankan leopard, observing wild elephant herds, or bird watching, our expert local guides ensure an ethical, premium, and deeply native jeep safari experience.
             </p>
@@ -38,7 +38,7 @@ export default function AboutPreview() {
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </Link>
-              
+
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full border-2 border-olive-green flex items-center justify-center text-olive-green">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -69,15 +69,15 @@ export default function AboutPreview() {
 
             {/* Decorative background blocks overlapping the image */}
             <div className="absolute -z-10 -bottom-6 -right-6 w-3/4 h-3/4 bg-olive-green rounded-3xl" />
-            
+
             {/* Overlay statistics card */}
             <div className="absolute -left-8 md:-left-12 bottom-12 bg-white p-6 rounded-2xl shadow-xl z-20 flex items-center gap-5 border border-warm-sand/50 hidden sm:flex">
               <div className="bg-warm-sand/40 text-sunset-gold w-14 h-14 rounded-full flex items-center justify-center">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                   <circle cx="9" cy="7" r="4"></circle>
-                   <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                   <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                 </svg>
               </div>
               <div className="flex flex-col">
@@ -86,7 +86,7 @@ export default function AboutPreview() {
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>

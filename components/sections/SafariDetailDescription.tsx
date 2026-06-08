@@ -43,8 +43,8 @@ export default function SafariDetailDescription({ safari }: { safari: SafariPack
             </div>
 
             <h2 className="text-4xl md:text-5xl font-extrabold text-deep-charcoal leading-[1.1] mb-8 tracking-tight">
-              What Makes the <br/>
-              <span className="italic text-olive-green">{safari.title}</span> <br/>
+              What Makes the <br />
+              <span className="italic text-olive-green">{safari.title}</span> <br />
               Extraordinary?
             </h2>
 
@@ -171,7 +171,7 @@ export default function SafariDetailDescription({ safari }: { safari: SafariPack
           <div className="w-full lg:w-5/12 bg-deep-charcoal p-10 md:p-16 flex flex-col justify-center relative overflow-hidden">
             <div className="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-sunset-gold/10 blur-[80px] pointer-events-none" />
             <span className="text-sunset-gold font-bold text-xs tracking-[0.4em] uppercase mb-6 block">Full Breakdown</span>
-            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-6">What's <br/> Included</h3>
+            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-6">What&apos;s <br /> Included</h3>
             <p className="text-warm-sand/60 font-medium leading-relaxed text-base">
               Every detail has been arranged so you can be fully present in the wild — not worrying about logistics.
             </p>

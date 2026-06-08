@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
 import SafariPackages from "@/components/sections/SafariPackages";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -8,6 +9,14 @@ import StaySection from "@/components/sections/StaySection";
 import Testimonials from "@/components/sections/Testimonials";
 import BookingCTA from "@/components/sections/BookingCTA";
 import ContactPreview from "@/components/sections/ContactPreview";
+
+export const metadata: Metadata = {
+  title: "Yala Safari Jeep Tours | Private Yala National Park Safaris",
+  description: "Experience the wild beauty of Yala National Park with Yala Safari Jeeps. Book your private, premium 4x4 safari adventure in Sri Lanka today.",
+  alternates: {
+    canonical: "https://yalasafarijeeps.com",
+  },
+};
 
 export default function Home() {
   return (

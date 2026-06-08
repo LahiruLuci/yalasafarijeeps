@@ -6,10 +6,10 @@ import TeamSection from "@/components/sections/TeamSection";
 import BookingCTA from "@/components/sections/BookingCTA";
 
 export const metadata = {
-  title: "About Us | Yala Safari Jeeps",
-  description: "Learn about Yala Safari Jeeps, our expert guides, our premium fleet, and our commitment to ethical wildlife tourism in Sri Lanka.",
+  title: "About Yala Safari Jeeps | Local Safari Experts in Sri Lanka",
+  description: "Learn about Yala Safari Jeeps, our expert guides, our premium fleet, and our decade-long commitment to ethical wildlife tourism in Yala, Sri Lanka.",
   alternates: {
-    canonical: "/about",
+    canonical: "https://yalasafarijeeps.com/about",
   },
 };
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
 
         {/* 2. Company Story Timeline */}
         <CompanyStory />
-        
+
         {/* 3. Mission & Vision */}
         <MissionVision />
 

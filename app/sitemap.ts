@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/safari',
     '/stay',
     '/tours',
+    '/booking',
     '/safari/morning',
     '/safari/evening',
     '/safari/full-day',

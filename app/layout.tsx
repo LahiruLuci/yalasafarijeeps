@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://yalasafarijeeps.com"),
   title: {
-    default: "Yala Safari Jeeps | Premium Safari Experience in Sri Lanka",
-    template: "%s | Yala Safari Jeeps"
+    default: "Yala Safari Jeep Tours | Private Yala National Park Safaris",
+    template: "%s"
   },
   description: "Experience the wild beauty of Yala National Park with Yala Safari Jeeps. Book your premium, luxury safari adventure in Sri Lanka today.",
   alternates: {

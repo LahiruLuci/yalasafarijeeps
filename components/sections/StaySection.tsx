@@ -37,12 +37,12 @@ export default function StaySection() {
   return (
     <section className="bg-warm-sand/20 py-24 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        
+
         {/* Header Area */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <span className="text-sunset-gold font-bold text-sm tracking-[0.3em] uppercase mb-4 block">
-              Discover Comfort Amidst Nature's Majesty
+              Discover Comfort Amidst Nature&apos;s Majesty
             </span>
             <h2 className="text-4xl md:text-5xl font-extrabold text-deep-charcoal mb-6 leading-tight">
               Curated Places to Stay
@@ -52,7 +52,7 @@ export default function StaySection() {
             </p>
           </div>
           <div className="hidden md:block">
-            <Link 
+            <Link
               href="/stay"
               className="inline-flex items-center gap-2 pb-2 border-b-2 border-sunset-gold text-deep-charcoal font-bold text-sm tracking-widest uppercase hover:text-sunset-gold transition-colors"
             >
@@ -67,7 +67,7 @@ export default function StaySection() {
         {/* Accommodation Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {accommodations.map((lodging) => (
-            <div 
+            <div
               key={lodging.id}
               className="group flex flex-col bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
             >
@@ -80,14 +80,14 @@ export default function StaySection() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80" />
-                
+
                 {/* Overlay Tags */}
                 <div className="absolute top-6 left-6">
                   <span className="px-4 py-1.5 bg-white/90 backdrop-blur text-deep-charcoal text-xs font-black uppercase tracking-wider rounded-full shadow">
                     {lodging.type}
                   </span>
                 </div>
-                
+
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="flex text-sunset-gold mb-2">
                     {[...Array(lodging.stars)].map((_, i) => (
@@ -119,7 +119,7 @@ export default function StaySection() {
 
         {/* Mobile View All Button */}
         <div className="mt-12 text-center md:hidden">
-          <Link 
+          <Link
             href="/stay"
             className="inline-flex items-center gap-2 pb-2 border-b-2 border-sunset-gold text-deep-charcoal font-bold text-sm tracking-widest uppercase"
           >

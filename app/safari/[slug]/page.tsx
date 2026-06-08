@@ -15,15 +15,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const safari = getSafariBySlug(slug);
   if (!safari) return {};
-  
+
+  const titleMap: Record<string, string> = {
+    'morning': 'Morning Yala Safari | Private Jeep Tour with Hotel Pickup',
+    'evening': 'Evening Yala Safari | Golden Hour Wildlife Jeep Tour',
+    'full-day': 'Full Day Yala Safari | Private Leopard Safari Experience'
+  };
+
+  const seoTitle = titleMap[slug] || `${safari.title} | Yala Safari Jeeps`;
+
   return {
-    title: `${safari.title} | Yala Safari Jeeps`,
+    title: seoTitle,
     description: safari.description,
     alternates: {
-      canonical: `/safari/${slug}`,
+      canonical: `https://yalasafarijeeps.com/safari/${slug}`,
     },
     openGraph: {
-      title: `${safari.title} | Premium Yala Safari`,
+      title: seoTitle,
       description: safari.longDescription.slice(0, 160),
       url: `https://yalasafarijeeps.com/safari/${slug}`,
       siteName: "Yala Safari Jeeps",

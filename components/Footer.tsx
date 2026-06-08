@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-deep-charcoal text-soft-beige pt-20 pb-8 relative overflow-hidden border-t-[8px] border-sunset-gold">
-      
+
       {/* Decorative large animal watermark in the background */}
       <div className="absolute -bottom-20 -right-20 opacity-5 pointer-events-none w-[600px] h-[600px]">
         <svg viewBox="0 0 24 24" fill="currentColor">
@@ -19,7 +19,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand Column */}
           <div className="lg:col-span-4 flex flex-col gap-6">
             <Link href="/" className="inline-block">
@@ -59,11 +59,17 @@ export default function Footer() {
           <div className="lg:col-span-2 lg:col-start-6 flex flex-col gap-6">
             <h4 className="text-white font-bold text-lg border-b-2 border-sunset-gold pb-2 inline-block self-start">Navigation</h4>
             <ul className="flex flex-col gap-3">
-              {['Home', 'About Us', 'Safari Packages', 'Places to Stay', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <Link href="#" className="text-warm-sand/80 hover:text-sunset-gold transition-colors flex items-center gap-2 group">
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'About Us', href: '/about' },
+                { name: 'Safari Packages', href: '/safari' },
+                { name: 'Places to Stay', href: '/stay' },
+                { name: 'Contact Us', href: '/contact' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-warm-sand/80 hover:text-sunset-gold transition-colors flex items-center gap-2 group">
                     <span className="w-1 h-1 bg-sunset-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -74,11 +80,17 @@ export default function Footer() {
           <div className="lg:col-span-2 flex flex-col gap-6">
             <h4 className="text-white font-bold text-lg border-b-2 border-sunset-gold pb-2 inline-block self-start">Our Services</h4>
             <ul className="flex flex-col gap-3">
-              {['Yala Safari', 'Udawalawe Safari', 'Bundala Safari', 'Lunugamwehera Safari', 'Whale Watching'].map((link) => (
-                <li key={link}>
-                  <Link href="#" className="text-warm-sand/80 hover:text-sunset-gold transition-colors flex items-center gap-2 group">
+              {[
+                { name: 'Yala Safari', href: '/safari/morning' },
+                { name: 'Udawalawe Safari', href: '/safari' },
+                { name: 'Bundala Safari', href: '/safari' },
+                { name: 'Lunugamwehera Safari', href: '/safari' },
+                { name: 'Whale Watching', href: '/tours' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link href={link.href} className="text-warm-sand/80 hover:text-sunset-gold transition-colors flex items-center gap-2 group">
                     <span className="w-1 h-1 bg-sunset-gold rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}
@@ -103,15 +115,15 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          
+
         </div>
 
         {/* Global Copyright Section */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-warm-sand/50 font-medium">
           <p>© {currentYear} Yala Safari Jeeps. All rights reserved.</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-sunset-gold transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-sunset-gold transition-colors">Terms of Service</Link>
+            <Link href="/contact" className="hover:text-sunset-gold transition-colors">Privacy Policy</Link>
+            <Link href="/contact" className="hover:text-sunset-gold transition-colors">Terms of Service</Link>
           </div>
         </div>
 

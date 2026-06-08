@@ -36,21 +36,21 @@ const testimonials = [
     name: "Elena Rodriguez",
     location: "Madrid, Spain",
     initials: "ER",
-    color: "bg-[#8E7E5A]", 
+    color: "bg-[#8E7E5A]",
     date: "November 2025",
     rating: 5,
     title: "Exceptional from start to finish",
-    text: "From the seamless hotel pickup to the beautifully arranged wilderness picnic, every detail was perfect. Our tracker anticipated the animals' movements beautifully. Highly recommend the evening drive!",
+    text: "From the seamless hotel pickup to the beautifully arranged wilderness picnic, every detail was perfect. Our tracker anticipated the animals&apos; movements beautifully. Highly recommend the evening drive!",
   },
   {
     id: 4,
     name: "David Dubois",
     location: "Paris, France",
     initials: "DD",
-    color: "bg-[#A65B3B]", 
+    color: "bg-[#A65B3B]",
     date: "August 2025",
     rating: 5,
-    title: "A photographer's ultimate dream",
+    title: "A photographer&apos;s ultimate dream",
     text: "As a wildlife photographer, positioning is everything. Our driver incredibly understood angles and lighting, maneuvering us into perfect positions without stressing the animals. Got the shot of a lifetime.",
   },
   {
@@ -58,7 +58,7 @@ const testimonials = [
     name: "Aisha Patel",
     location: "Mumbai, India",
     initials: "AP",
-    color: "bg-[#555C31]", 
+    color: "bg-[#555C31]",
     date: "December 2025",
     rating: 5,
     title: "Magical family adventure",
@@ -69,18 +69,18 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="bg-olive-green py-24 md:py-32 relative overflow-hidden">
-      
+
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-sunset-gold/10 rounded-full blur-[100px]" />
         <div className="absolute bottom-0 -left-20 w-80 h-80 bg-warm-sand/5 rounded-full blur-[80px]" />
         <svg className="absolute top-10 left-10 text-white/5 w-64 h-64 transform -rotate-12" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
-            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
         </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-24">
           <span className="text-sunset-gold font-bold text-sm tracking-[0.3em] uppercase mb-4 block">
@@ -90,7 +90,7 @@ export default function Testimonials() {
             Guest Experiences
           </h2>
           <p className="text-lg text-warm-sand/80 font-medium leading-relaxed">
-            Don't just take our word for it. Discover the indelible memories and breathtaking encounters shared by explorers from around the globe.
+            Don&apos;t just take our word for it. Discover the indelible memories and breathtaking encounters shared by explorers from around the globe.
           </p>
         </div>
 
@@ -132,12 +132,11 @@ export default function Testimonials() {
             {testimonials.map((review) => (
               <SwiperSlide key={review.id} className="max-w-[320px] sm:max-w-[400px] md:max-w-[480px]">
                 {({ isActive }) => (
-                  <div 
-                    className={`relative p-8 md:p-12 rounded-3xl transition-all duration-700 h-full flex flex-col justify-between ${
-                      isActive 
-                        ? 'bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] scale-100 opacity-100 z-20' 
+                  <div
+                    className={`relative p-8 md:p-12 rounded-3xl transition-all duration-700 h-full flex flex-col justify-between ${isActive
+                        ? 'bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] scale-100 opacity-100 z-20'
                         : 'bg-warm-sand/90 shadow-xl scale-95 opacity-50 z-10 blur-[2px]'
-                    }`}
+                      }`}
                   >
                     {/* Top Section */}
                     <div>
@@ -157,7 +156,7 @@ export default function Testimonials() {
                       <h3 className={`text-2xl font-extrabold mb-4 leading-tight ${isActive ? 'text-deep-charcoal' : 'text-olive-green'}`}>
                         "{review.title}"
                       </h3>
-                      
+
                       <p className={`text-base leading-relaxed mb-10 ${isActive ? 'text-safari-brown/80' : 'text-safari-brown/60'}`}>
                         {review.text}
                       </p>

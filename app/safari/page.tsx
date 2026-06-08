@@ -3,14 +3,14 @@ import SafariIntro from "@/components/sections/SafariIntro";
 import SafariTypesList from "@/components/sections/SafariTypesList";
 
 export const metadata = {
-  title: "Safari Packages | Yala Safari Jeeps",
-  description: "Explore our range of premium Yala safari packages — from morning half-day safaris to exclusive overnight expedition experiences in Yala National Park, Sri Lanka.",
+  title: "Yala Safari Packages | Morning, Evening & Full Day Jeep Safaris",
+  description: "Explore our range of premium Yala safari packages — from morning half-day expeditions to golden hour evening tours and full-day private safaris in Yala National Park.",
   alternates: {
-    canonical: "/safari",
+    canonical: "https://yalasafarijeeps.com/safari",
   },
   openGraph: {
-    title: "Safari Packages | Yala Safari Jeeps",
-    description: "Choose from half-day, full-day, overnight and multi-day safari packages in Yala National Park. Book your premium wildlife experience today.",
+    title: "Yala Safari Packages | Premium Wildlife Experiences",
+    description: "Choose from morning, evening, and full-day safari packages in Yala National Park. Book your private 4x4 expedition with expert trackers today.",
   },
 };
 

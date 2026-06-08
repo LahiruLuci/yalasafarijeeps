@@ -18,7 +18,7 @@ export default function Schema() {
         },
         "image": "https://yalasafarijeeps.com/images/yala-banner.jpg",
         "description": "Premium Yala Safari experience provider since 2008. Specializing in Leopard Tracking, Bear Safaris, and luxury wildlife photography expeditions in Yala National Park.",
-        "telephone": "+94 77 123 4567",
+        "telephone": "+61 416 482 262",
         "email": "hello@yalasafarijeeps.com",
         "priceRange": "$$$",
         "address": {

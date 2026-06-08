@@ -13,11 +13,11 @@ const SLIDES = [
     image: "/images/new-images/wildlife-page-hero-image.webp",
     title: "ETERNAL",
     highlight: "WILDLIFE",
-    desc: "Immerse yourself in the sanctuary of biodiversity, where rare endemic species thrive amidst the untamed beauty of Yala's nature.",
+    desc: "Immerse yourself in the sanctuary of biodiversity, where rare endemic species thrive amidst the untamed beauty of Yala&apos;s nature.",
     location: "Yala National Park",
     stats: [
-       { label: "Diversity", value: "High" },
-       { label: "Species", value: "300+" }
+      { label: "Diversity", value: "High" },
+      { label: "Species", value: "300+" }
     ]
   },
   {
@@ -25,11 +25,11 @@ const SLIDES = [
     image: "/images/slider/hero-signature.png",
     title: "UNTAMED",
     highlight: "LEGACY",
-    desc: "Venture into the heart of Yala, where the shadows of ancient granite boulders hide the world's most dense leopard population.",
+    desc: "Venture into the heart of Yala, where the shadows of ancient granite boulders hide the world&apos;s most dense leopard population.",
     location: "Block I, Yala West",
     stats: [
-       { label: "Sightings", value: "94%" },
-       { label: "Guides", value: "Level 4" }
+      { label: "Sightings", value: "94%" },
+      { label: "Guides", value: "Level 4" }
     ]
   },
   {
@@ -40,8 +40,8 @@ const SLIDES = [
     desc: "Witness the majestic migration of Asian elephant herds across the emerald lagoons of the southeastern plains.",
     location: "Sella Kataragama",
     stats: [
-        { label: "Population", value: "400+" },
-        { label: "Status", value: "Wild" }
+      { label: "Population", value: "400+" },
+      { label: "Status", value: "Wild" }
     ]
   },
   {
@@ -52,8 +52,8 @@ const SLIDES = [
     desc: "Experience the golden hour in Yala, a cinematic transition where predators emerge for the nightly chase under timber skies.",
     location: "Palatupana Entrance",
     stats: [
-       { label: "Terrain", value: "Arid" },
-       { label: "Species", value: "215+" }
+      { label: "Terrain", value: "Arid" },
+      { label: "Species", value: "215+" }
     ]
   }
 ];
@@ -84,7 +84,7 @@ export default function Hero() {
   const slide = SLIDES[index];
 
   return (
-    <section 
+    <section
       ref={containerRef}
       className="relative w-full h-[100svh] min-h-[700px] overflow-hidden bg-deep-charcoal"
     >
@@ -116,7 +116,7 @@ export default function Hero() {
 
       {/* 2. Main Content Stack (Editorial Layout) */}
       <div className="container mx-auto h-full px-6 md:px-12 relative z-20 flex flex-col justify-center pt-16 md:pt-24">
-        
+
         <div className="max-w-5xl">
 
           {/* Headline Engine (Modern Masking Effect) */}
@@ -130,7 +130,7 @@ export default function Hero() {
                 transition={{ duration: 0.5 }}
               >
                 <div className="overflow-hidden">
-                  <motion.h1 
+                  <motion.h1
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -140,7 +140,7 @@ export default function Hero() {
                   </motion.h1>
                 </div>
                 <div className="overflow-hidden mt-[-10px] md:mt-[-20px]">
-                  <motion.h1 
+                  <motion.h1
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
@@ -164,17 +164,17 @@ export default function Hero() {
               <p className="text-warm-sand/80 text-lg md:text-xl font-medium leading-relaxed mb-10 max-w-md border-l-2 border-sunset-gold/30 pl-8 italic">
                 {slide.desc}
               </p>
-              
+
               <div className="flex flex-wrap items-center gap-6">
-                <Link 
+                <Link
                   href="/safari"
                   className="group relative overflow-hidden bg-sunset-gold px-10 py-5 rounded-full text-deep-charcoal font-black text-sm tracking-widest transition-all hover:scale-110 active:scale-95 flex items-center gap-4 shadow-[0_0_40px_rgba(208,122,63,0.3)]"
                 >
                   DISCOVER THE WILD
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" strokeWidth={3} />
                 </Link>
-                
-                <Link 
+
+                <Link
                   href="/booking"
                   className="text-white hover:text-sunset-gold font-bold text-sm tracking-widest border-b-2 border-white/20 pb-1 transition-all flex items-center gap-3"
                 >
@@ -193,7 +193,7 @@ export default function Hero() {
               className="hidden lg:block bg-white/5 backdrop-blur-2xl border border-white/10 p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group hover:bg-white/10 transition-colors"
             >
               <div className="absolute top-0 right-0 p-8">
-                 <Wind className="text-sunset-gold/30 w-16 h-16 animate-pulse" />
+                <Wind className="text-sunset-gold/30 w-16 h-16 animate-pulse" />
               </div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 text-sunset-gold mb-4">
@@ -243,13 +243,13 @@ export default function Hero() {
 
         {/* Arrow Buttons */}
         <div className="flex items-center gap-4 ml-6 pl-6 border-l border-white/10">
-          <button 
+          <button
             onClick={handlePrev}
             className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-sunset-gold hover:border-sunset-gold transition-all group"
           >
             <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
           </button>
-          <button 
+          <button
             onClick={handleNext}
             className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-sunset-gold hover:border-sunset-gold transition-all group"
           >
@@ -260,10 +260,10 @@ export default function Hero() {
 
       {/* Side Decorative IDs */}
       <div className="absolute left-8 bottom-12 hidden md:flex flex-col gap-4 items-center">
-         <span className="text-sunset-gold font-black text-xl italic tracking-tighter">
-            {slide.id}
-         </span>
-         <div className="h-24 w-[1px] bg-gradient-to-t from-sunset-gold to-transparent" />
+        <span className="text-sunset-gold font-black text-xl italic tracking-tighter">
+          {slide.id}
+        </span>
+        <div className="h-24 w-[1px] bg-gradient-to-t from-sunset-gold to-transparent" />
       </div>
 
     </section>

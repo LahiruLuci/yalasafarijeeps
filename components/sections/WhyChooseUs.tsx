@@ -6,7 +6,7 @@ const features = [
   {
     id: 1,
     title: "Expert Local Trackers",
-    description: "Our guides possess an intimate knowledge of Yala's terrain and wildlife behaviors, significantly increasing your chances of spotting the elusive leopard.",
+    description: "Our guides possess an intimate knowledge of Yala&apos;s terrain and wildlife behaviors, significantly increasing your chances of spotting the elusive leopard.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -29,7 +29,7 @@ const features = [
   {
     id: 3,
     title: "Ethical Eco-Tourism",
-    description: "We are deeply committed to sustainable practices that protect Yala's delicate ecosystem while providing you a pristine, undisturbed experience.",
+    description: "We are deeply committed to sustainable practices that protect Yala&apos;s delicate ecosystem while providing you a pristine, undisturbed experience.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"></path>
@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
     <section className="bg-white py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          
+
           {/* Left Column - Large Image */}
           <div className="w-full lg:w-1/2 relative">
             <div className="relative h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl group">
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-safari-brown/60 to-transparent" />
-              
+
               {/* Floating Badge */}
               <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur px-6 py-4 rounded-xl shadow-xl flex items-center gap-4">
                 <div className="bg-sunset-gold/10 p-3 rounded-full text-sunset-gold">
@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
                 </div>
               </div>
             </div>
-            
+
             {/* Background Accent Element */}
             <div className="absolute -z-10 -bottom-8 -left-8 w-64 h-64 bg-olive-green/10 rounded-full blur-3xl"></div>
           </div>
@@ -89,17 +89,16 @@ export default function WhyChooseUs() {
                 Why Venture With Us?
               </h2>
               <p className="text-lg text-safari-brown/80 font-medium leading-relaxed">
-                At Yala Safari Jeeps, we don’t just offer a tour; we provide an immersion into the untamed beauty of Sri Lanka. Discover what makes us the premier choice for wildlife enthusiasts globally.
+                At Yala Safari Jeeps, we don&apos;t just offer a tour; we provide an immersion into the untamed beauty of Sri Lanka. Discover what makes us the premier choice for wildlife enthusiasts globally.
               </p>
             </div>
 
             <div className="flex flex-col gap-8">
               {features.map((feature, idx) => (
-                <div 
-                  key={feature.id} 
-                  className={`flex gap-6 items-start group ${
-                    idx !== features.length - 1 ? "border-b border-gray-100 pb-8" : ""
-                  }`}
+                <div
+                  key={feature.id}
+                  className={`flex gap-6 items-start group ${idx !== features.length - 1 ? "border-b border-gray-100 pb-8" : ""
+                    }`}
                 >
                   <div className="flex-shrink-0 w-14 h-14 bg-warm-sand/50 group-hover:bg-sunset-gold rounded-full flex items-center justify-center text-olive-green group-hover:text-white transition-colors duration-300 shadow-sm group-hover:shadow-md">
                     {feature.icon}
