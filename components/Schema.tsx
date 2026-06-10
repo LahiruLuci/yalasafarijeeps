@@ -12,7 +12,7 @@ export default function Schema() {
         "url": "https://yalasafarijeeps.com",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://yalasafarijeeps.com/images/logo-new.png",
+          "url": "https://yalasafarijeeps.com/images/logo-new.webp",
           "width": "800",
           "height": "800"
         },

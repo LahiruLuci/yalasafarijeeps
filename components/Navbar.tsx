@@ -55,11 +55,11 @@ export default function Navbar() {
           <Link href="/" className="relative z-50">
             <div className="flex items-center">
               <div className={`relative transition-all duration-300 ${isScrolled
-                ? "w-15 h-15 md:w-18 md:h-18"
-                : "w-18 h-18 md:w-28 md:h-28"
+                ? "w-14 h-14 md:w-16 md:h-16"
+                : "w-16 h-16 md:w-24 md:h-24"
                 }`}>
                 <Image
-                  src="/images/logo-new.png"
+                  src="/images/logo-new.webp"
                   alt="Yala Safari Jeeps Logo"
                   fill
                   sizes="(max-width: 768px) 80px, 128px"
@@ -123,9 +123,9 @@ export default function Navbar() {
       >
         {/* Mobile Menu Header */}
         <div className="flex justify-between items-center px-6 py-6 w-full border-b border-white/10 bg-[#3E3B2F]">
-          <div className="relative w-24 h-24">
+          <div className="relative w-20 h-20">
             <Image
-              src="/images/logo-new.png"
+              src="/images/logo-new.webp"
               alt="Yala Safari Jeeps Logo"
               fill
               sizes="96px"

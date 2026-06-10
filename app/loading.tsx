@@ -26,7 +26,7 @@ export default function GlobalLoader() {
           {/* The Core Logo */}
           <div className="relative w-24 h-24 md:w-32 md:h-32 p-4 animate-[heartbeat_3s_ease-in-out_infinite]">
             <Image
-              src="/images/logo-new.png"
+              src="/images/logo-new.webp"
               alt="Yala Safari Jeeps"
               fill
               sizes="(max-width: 768px) 96px, 128px"

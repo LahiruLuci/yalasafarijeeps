@@ -27,9 +27,9 @@ export default function Footer() {
           <div className="lg:col-span-4 flex flex-col gap-6">
             <Link href="/" className="inline-block">
               <div className="flex items-center">
-                <div className="relative w-32 h-32">
+                <div className="relative w-28 h-28">
                   <Image
-                    src="/images/logo-new.png"
+                    src="/images/logo-new.webp"
                     alt="Yala Safari Jeeps Logo"
                     fill
                     sizes="(max-width: 768px) 208px, 208px"

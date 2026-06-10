@@ -43,6 +43,8 @@ export const metadata: Metadata = {
   },
 };
 
+import WhatsAppFloating from "@/components/WhatsAppFloating";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -77,6 +79,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <WhatsAppFloating />
       </body>
     </html>
   );
