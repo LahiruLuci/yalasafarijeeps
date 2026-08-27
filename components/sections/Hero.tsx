@@ -11,7 +11,8 @@ import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Wind, Zap } from "lucide
 const SLIDES = [
   {
     id: "01",
-    image: "/images/new-images/wildlife-page-hero-image.webp",
+    image: "/images/home-hero/desktop slider 1.webp",
+    imageMobile: "/images/home-hero/mobile slider 1.webp",
     title: "ETERNAL",
     highlight: "WILDLIFE",
     desc: "Immerse yourself in the sanctuary of biodiversity, where rare endemic species thrive amidst the untamed beauty of Yala&apos;s nature.",
@@ -23,7 +24,8 @@ const SLIDES = [
   },
   {
     id: "02",
-    image: "/images/slider/hero-signature.png",
+    image: "/images/home-hero/desktop slider 2.webp",
+    imageMobile: "/images/home-hero/mobile slider 2.webp",
     title: "UNTAMED",
     highlight: "LEGACY",
     desc: "Venture into the heart of Yala, where the shadows of ancient granite boulders hide the world&apos;s most dense leopard population.",
@@ -35,7 +37,8 @@ const SLIDES = [
   },
   {
     id: "03",
-    image: "/images/slider/hero-elephants.png",
+    image: "/images/home-hero/dektop slider 3.webp",
+    imageMobile: "/images/home-hero/mobile slider 3.webp",
     title: "GENTLE",
     highlight: "GIANTS",
     desc: "Witness the majestic migration of Asian elephant herds across the emerald lagoons of the southeastern plains.",
@@ -47,7 +50,8 @@ const SLIDES = [
   },
   {
     id: "04",
-    image: "/images/yala-national-park/yala-national-park-sri-lanka-image5.jpg",
+    image: "/images/home-hero/desktop slider 4.webp",
+    imageMobile: "/images/home-hero/mobile slider 4.webp",
     title: "SILENT",
     highlight: "PROWL",
     desc: "Experience the golden hour in Yala, a cinematic transition where predators emerge for the nightly chase under timber skies.",
@@ -100,13 +104,23 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="absolute inset-0 z-0"
         >
+          {/* Desktop Image */}
           <Image
             src={slide.image}
             alt={slide.title}
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="hidden md:block object-cover object-center"
+          />
+          {/* Mobile Image */}
+          <Image
+            src={slide.imageMobile}
+            alt={slide.title}
+            fill
+            priority
+            sizes="100vw"
+            className="block md:hidden object-cover object-center"
           />
           {/* Dynamic Cinematic Gradient Overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-deep-charcoal via-deep-charcoal/40 to-transparent z-10" />
@@ -175,7 +189,7 @@ export default function Hero() {
                     item_name: "Discover The Wild",
                     item_category: "safari_explore"
                   })}
-                  className="group relative overflow-hidden bg-sunset-gold px-10 py-5 rounded-full text-deep-charcoal font-black text-sm tracking-widest transition-all hover:scale-110 active:scale-95 flex items-center gap-4 shadow-[0_0_40px_rgba(208,122,63,0.3)]"
+                  className="group relative overflow-hidden bg-sunset-gold px-6 py-3.5 md:px-10 md:py-5 rounded-full text-deep-charcoal font-black text-xs md:text-sm tracking-widest transition-all hover:scale-110 active:scale-95 flex items-center gap-3 md:gap-4 shadow-[0_0_40px_rgba(208,122,63,0.3)]"
                 >
                   DISCOVER THE WILD
                   <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-2" strokeWidth={3} />
@@ -185,7 +199,7 @@ export default function Hero() {
                   href="/booking"
                   data-event="book_now_click"
                   onClick={() => trackEvent("book_now_click", { location: "hero" })}
-                  className="text-white hover:text-sunset-gold font-bold text-sm tracking-widest border-b-2 border-white/20 pb-1 transition-all flex items-center gap-3"
+                  className="text-white hover:text-sunset-gold font-bold text-xs md:text-sm tracking-widest border-b-2 border-white/20 pb-1 transition-all flex items-center gap-2 md:gap-3"
                 >
                   SECURE A JEEP
                   <Zap className="w-4 h-4" />
@@ -225,9 +239,9 @@ export default function Hero() {
       </div>
 
       {/* 3. Navigation Controls (Next Level) */}
-      <div className="absolute right-8 bottom-12 z-30 flex items-center gap-8">
+      <div className="absolute right-4 bottom-6 md:right-8 md:bottom-12 z-30 flex items-center gap-4 md:gap-8">
         {/* Progress Circle Indicators */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
           {SLIDES.map((_, i) => (
             <button
               key={i}
@@ -235,9 +249,9 @@ export default function Hero() {
                 setDirection(i > index ? 1 : -1);
                 setIndex(i);
               }}
-              className="group relative w-12 h-12 flex items-center justify-center transition-all"
+              className="group relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center transition-all"
             >
-              <div className={`w-2 h-2 rounded-full transition-all duration-500 ${index === i ? "bg-sunset-gold scale-150 shadow-[0_0_15px_rgba(208,122,63,0.8)]" : "bg-white/20"}`} />
+              <div className={`w-1.5 h-1.5 md:w-2 md:h-2 rounded-full transition-all duration-500 ${index === i ? "bg-sunset-gold scale-150 shadow-[0_0_15px_rgba(208,122,63,0.8)]" : "bg-white/20"}`} />
               <svg className="absolute inset-0 w-full h-full rotate-[-90deg]">
                 <circle
                   cx="50%" cy="50%" r="20"
@@ -251,18 +265,18 @@ export default function Hero() {
         </div>
 
         {/* Arrow Buttons */}
-        <div className="flex items-center gap-4 ml-6 pl-6 border-l border-white/10">
+        <div className="flex items-center gap-3 md:gap-4 ml-2 md:ml-6 pl-2 md:pl-6 border-l border-white/10">
           <button
             onClick={handlePrev}
-            className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-sunset-gold hover:border-sunset-gold transition-all group"
+            className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-sunset-gold hover:border-sunset-gold transition-all group"
           >
-            <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
           </button>
           <button
             onClick={handleNext}
-            className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-sunset-gold hover:border-sunset-gold transition-all group"
+            className="w-10 h-10 md:w-14 md:h-14 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-sunset-gold hover:border-sunset-gold transition-all group"
           >
-            <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
+            <ChevronRight className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
           </button>
         </div>
       </div>

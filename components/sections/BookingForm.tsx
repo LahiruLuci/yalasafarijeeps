@@ -92,13 +92,23 @@ Please confirm availability.`;
     setStatus("success");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
     setStatus("submitting");
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      await fetch("https://formsubmit.co/ajax/info@yalasafarijeeps.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          _subject: "New Safari Booking Request",
+          ...formData
+        })
+      });
       trackEvent("generate_lead", {
         lead_type: "booking",
         safari_package: formData.package.toLowerCase().replace(/\s+/g, '_'),
@@ -106,7 +116,10 @@ Please confirm availability.`;
         page_path: window.location.pathname
       });
       setStatus("success");
-    }, 1500);
+    } catch (error) {
+      console.error("Booking submission error", error);
+      setStatus("idle");
+    }
   };
 
   if (status === "success") {

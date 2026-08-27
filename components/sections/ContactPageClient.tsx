@@ -91,11 +91,23 @@ Please contact me at your earliest convenience.`;
         setStatus("success");
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!validate()) return;
         setStatus("submitting");
-        setTimeout(() => {
+
+        try {
+            await fetch("https://formsubmit.co/ajax/info@yalasafarijeeps.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify({
+                    _subject: "New Safari Inquiry from Website",
+                    ...formData
+                })
+            });
             trackEvent("generate_lead", {
                 lead_type: "contact",
                 safari_package: formData.safariPackage.toLowerCase().replace(/\s+/g, '_'),
@@ -103,7 +115,10 @@ Please contact me at your earliest convenience.`;
                 page_path: "/contact"
             });
             setStatus("success");
-        }, 1200);
+        } catch (error) {
+            console.error("Form submission error", error);
+            setStatus("idle");
+        }
     };
 
     if (status === "success") {
