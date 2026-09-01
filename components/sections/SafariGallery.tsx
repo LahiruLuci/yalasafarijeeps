@@ -22,13 +22,13 @@ const galleryImages: Record<string, { src: string; caption: string }[]> = {
     { src: "/images/yala-national-park/yala-national-park-sri-lanka-image10.jpg", caption: "Sloth bear spotted in fading light" },
     { src: "/images/yala-national-park/yala-national-park-sri-lanka-image11.jpg", caption: "Evening chorus from the canopy" },
   ],
-  "full-day": [
+  "tailor-made": [
     { src: "/images/yala-national-park/yala-national-park-sri-lanka-image2.jpg", caption: "Dawn breaks over Block I" },
     { src: "/images/yala-national-park/yala-national-park-sri-lanka-image5.jpg", caption: "The full expanse of Yala" },
     { src: "/images/yala-national-park/yala-national-park-sri-lanka-image1.jpg", caption: "Leopard spotted mid-morning" },
     { src: "/images/yala-national-park/yala-national-park-sri-lanka-image8.jpg", caption: "Midday heat at the lagoon" },
     { src: "/images/yala-national-park/yala-national-park-sri-lanka-image4.jpg", caption: "Elephant herd crossing" },
-    { src: "/images/yala-national-park/yala-national-park-sri-lanka-image9.jpg", caption: "Final golden hour of the full day" },
+    { src: "/images/yala-national-park/yala-national-park-sri-lanka-image9.jpg", caption: "Final golden hour of your custom safari" },
   ],
 };
 

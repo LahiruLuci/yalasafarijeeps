@@ -134,6 +134,14 @@ export default function Hero() {
 
         <div className="max-w-5xl">
 
+          {/* Primary SEO H1 - Visually integrated as a premium label */}
+          <div className="flex items-center gap-4 mb-8 overflow-hidden opacity-90">
+            <div className="h-px w-8 md:w-12 bg-sunset-gold/50" />
+            <h1 className="text-sunset-gold font-bold text-[10px] md:text-xs tracking-[0.5em] uppercase">
+              Yala Safari Jeep Tours
+            </h1>
+          </div>
+
           {/* Headline Engine (Modern Masking Effect) */}
           <div className="mb-12 relative">
             <AnimatePresence mode="wait">
@@ -145,24 +153,24 @@ export default function Hero() {
                 transition={{ duration: 0.5 }}
               >
                 <div className="overflow-hidden">
-                  <motion.h1
+                  <motion.div
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     className="text-5xl md:text-8xl lg:text-[9rem] font-black text-white leading-[0.85] tracking-tighter mix-blend-plus-lighter opacity-90"
                   >
                     {slide.title}
-                  </motion.h1>
+                  </motion.div>
                 </div>
                 <div className="overflow-hidden mt-[-10px] md:mt-[-20px]">
-                  <motion.h1
+                  <motion.div
                     initial={{ y: "100%" }}
                     animate={{ y: 0 }}
                     transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                     className="text-5xl md:text-8xl lg:text-[9rem] font-black text-transparent stroke-white stroke-1 bg-clip-text bg-gradient-to-r from-sunset-gold to-warm-sand leading-[0.85] tracking-tighter"
                   >
                     {slide.highlight}
-                  </motion.h1>
+                  </motion.div>
                 </div>
               </motion.div>
             </AnimatePresence>

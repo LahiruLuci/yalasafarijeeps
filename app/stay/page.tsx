@@ -25,7 +25,7 @@ export default function StayPage() {
       <StayExperience />
       <StayCategories />
       <StayList />
-      <FeaturedStayCards />
+      {/* <FeaturedStayCards /> */}
       <StayWhyChooseUs />
       <StaySafariCombo />
       <StayFAQ />

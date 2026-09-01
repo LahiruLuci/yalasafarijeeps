@@ -23,11 +23,15 @@ export default function BookingFAQ() {
         },
         {
             question: "What time does the morning safari start?",
-            answer: "The morning safari typically starts with a pickup around 5:00 AM to 5:15 AM, as the park gates open at 6:00 AM. Being early is crucial for the best leopard tracking opportunities."
+            answer: "The morning safari officially operates from 5:30 AM to 10:30 AM. We pick you up accordingly to ensure you are lined up for the park gates opening at 6:00 AM."
         },
         {
             question: "What should I bring?",
             answer: "We recommend bringing a camera, binoculars, sun protection, and a light jacket for the early morning. We provide bottled water and snacks, but you're welcome to bring your own as well."
+        },
+        {
+            question: "Can I customize my Yala safari?",
+            answer: "Yes. Our Tailor-Made Yala Safari option allows you to discuss your preferred schedule, interests and travel plans with us. The final arrangement is subject to park regulations, operating conditions and availability."
         }
     ];
 

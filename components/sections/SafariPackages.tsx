@@ -6,8 +6,8 @@ import Link from "next/link";
 const packages = [
   {
     id: "morning",
-    title: "Morning Jeep Safari",
-    time: "5:30 AM - 9:30 AM",
+    title: "Morning Safari",
+    time: "5:30 AM – 10:30 AM",
     description:
       "Journey begins at 5:30am from your hotel, while stars sparkle in their final hour of glory before the majestic Yala sunrise.",
     image: "/images/morning-safari-yala-national-park.jpg",
@@ -15,21 +15,21 @@ const packages = [
   },
   {
     id: "evening",
-    title: "Evening Jeep Safari",
-    time: "1:30 PM - 6:00 PM",
+    title: "Evening Safari",
+    time: "2:30 PM – 6:00 PM",
     description:
-      "Journey begins at 1:30pm from the hotel you abode. While the warmth of the sun teases, watch the leopards awaken for their evening prowl.",
+      "Journey begins at 2:30pm from the hotel you abode. While the warmth of the sun teases, watch the leopards awaken for their evening prowl.",
     image: "/images/new-images/evening-safari.webp",
     href: "/safari/evening",
   },
   {
-    id: "full-day",
-    title: "Full Day Jeep Safari",
-    time: "6:00 AM - 6:00 PM",
+    id: "tailor-made",
+    title: "Tailor-Made Yala Safari",
+    time: "Flexible Schedule",
     description:
-      "Allowing for a late start, the day safari begins at 6am from the hotel you board at. Immerse yourself completely in the untamed wilderness of Yala.",
+      "Create a safari experience around your interests, schedule and travel plans. Tell us what you're looking for, and we'll help arrange a personalized Yala safari experience.",
     image: "/images/full-day-safari.jpg",
-    href: "/safari/full-day",
+    href: "/safari/tailor-made",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function SafariPackages() {
             Signature Safari Packages
           </h2>
           <p className="text-lg text-safari-brown/80 font-medium leading-relaxed">
-            Experience the thrill of the wild with our expertly guided tours. Whether you seek the break of dawn, the golden hour, or a full day of exploration.
+            Experience the thrill of the wild with our expertly guided tours. Whether you seek the break of dawn, the golden hour, or a fully tailor-made journey.
           </p>
         </div>
 

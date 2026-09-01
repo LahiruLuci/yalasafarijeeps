@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const titleMap: Record<string, string> = {
     'morning': 'Morning Yala Safari Jeep Tour',
     'evening': 'Evening Yala Safari Jeep Tour',
-    'full-day': 'Full Day Yala Safari Jeep Tour'
+    'tailor-made': 'Tailor-Made Yala Safari | Private Yala Safari Experience'
   };
 
   const seoTitle = titleMap[slug] || safari.title;

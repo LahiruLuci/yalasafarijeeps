@@ -4,13 +4,13 @@ import SafariTypesList from "@/components/sections/SafariTypesList";
 
 export const metadata = {
   title: "Yala Safari Packages",
-  description: "Compare morning, evening, and full-day Yala safari jeep packages. Private 4x4 safaris with hotel pickup, local expert guides, and WhatsApp confirmation.",
+  description: "Compare morning, evening, and tailor-made custom Yala safari jeep packages. Private 4x4 safaris with hotel pickup, local expert guides, and WhatsApp confirmation.",
   alternates: {
     canonical: "https://yalasafarijeeps.com/safari",
   },
   openGraph: {
-    title: "Yala Safari Packages | Morning, Evening & Full Day",
-    description: "Compare morning, evening, and full-day Yala safari jeep packages with private 4x4 and hotel pickup.",
+    title: "Yala Safari Packages | Morning, Evening & Tailor-Made",
+    description: "Compare morning, evening, and tailor-made custom Yala safari jeep packages with private 4x4 and hotel pickup.",
   },
 };
 

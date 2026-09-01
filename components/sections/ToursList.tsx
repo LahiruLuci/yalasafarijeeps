@@ -37,8 +37,8 @@ const itinerary = [
   },
   {
     day: "06",
-    title: "Full Day Safari at Yala",
-    desc: "The definitive Yala experience. Spend a full 12 hours inside the park tracking leopards and observing the vibrant ecosystem. Includes a wilderness picnic lunch.",
+    title: "Tailor-Made Yala Safari",
+    desc: "Create a personalized private safari experience. Discuss your preferred schedule, wildlife interests, and travel plans with us so we can arrange the perfect Yala expedition tailored just for you.",
     image: "/images/full-day-safari.jpg"
   },
   {
@@ -61,7 +61,7 @@ export default function ToursList() {
   return (
     <section id="tours-list" className="bg-warm-sand py-24 md:py-32 relative px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 lg:mb-28">
           <span className="text-sunset-gold font-bold text-sm tracking-[0.4em] uppercase mb-4 block">
@@ -78,7 +78,7 @@ export default function ToursList() {
 
         {/* ── Split Interactive Itinerary ── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 relative">
-          
+
           {/* Left: Sticky Image Side (5 Cols) */}
           <div className="w-full lg:col-span-5 h-full relative">
             <div className="lg:sticky lg:top-32 lg:h-[600px] transition-all duration-300">
@@ -108,35 +108,31 @@ export default function ToursList() {
             {itinerary.map((item, index) => {
               const isActive = activeDay === index;
               return (
-                <div 
+                <div
                   key={index}
-                  className={`relative p-6 md:p-8 rounded-3xl transition-all duration-500 cursor-pointer overflow-hidden border ${
-                    isActive 
-                      ? "bg-white border-sunset-gold shadow-xl" 
+                  className={`relative p-6 md:p-8 rounded-3xl transition-all duration-500 cursor-pointer overflow-hidden border ${isActive
+                      ? "bg-white border-sunset-gold shadow-xl"
                       : "bg-white/50 border-white hover:bg-white/80"
-                  }`}
+                    }`}
                   onClick={() => setActiveDay(index)}
                 >
                   {/* Active highlight bar */}
                   <div className={`absolute left-0 top-0 bottom-0 w-2 transition-colors duration-500 ${isActive ? "bg-sunset-gold" : "bg-transparent"}`} />
 
                   <div className="flex items-start gap-5 md:gap-8 relative z-10 pl-2">
-                    <div className={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-500 ${
-                      isActive ? "bg-deep-charcoal text-sunset-gold" : "bg-warm-sand/80 text-safari-brown/40"
-                    }`}>
+                    <div className={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center flex-shrink-0 transition-colors duration-500 ${isActive ? "bg-deep-charcoal text-sunset-gold" : "bg-warm-sand/80 text-safari-brown/40"
+                      }`}>
                       <span className="font-extrabold text-xl md:text-2xl">{item.day}</span>
                     </div>
-                    
+
                     <div className="flex-1 pt-2 md:pt-3">
-                      <h4 className={`text-xl md:text-2xl font-extrabold transition-colors duration-300 ${
-                        isActive ? "text-deep-charcoal" : "text-safari-brown/70"
-                      }`}>
+                      <h4 className={`text-xl md:text-2xl font-extrabold transition-colors duration-300 ${isActive ? "text-deep-charcoal" : "text-safari-brown/70"
+                        }`}>
                         {item.title}
                       </h4>
-                      
-                      <div className={`grid transition-all duration-500 ease-in-out ${
-                        isActive ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
-                      }`}>
+
+                      <div className={`grid transition-all duration-500 ease-in-out ${isActive ? "grid-rows-[1fr] opacity-100 mt-4" : "grid-rows-[0fr] opacity-0 mt-0"
+                        }`}>
                         <div className="overflow-hidden">
                           <p className="text-safari-brown/80 leading-relaxed text-base md:text-lg">
                             {item.desc}
@@ -161,7 +157,7 @@ export default function ToursList() {
         <div className="mt-24 md:mt-32 max-w-4xl mx-auto bg-deep-charcoal rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
           {/* Background element */}
           <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-sunset-gold/10 rounded-full blur-[60px]" />
-          
+
           <div className="relative z-10 text-center md:text-left">
             <h3 className="text-3xl font-extrabold text-white mb-2">Ready to embark?</h3>
             <p className="text-warm-sand/60 font-medium">Customizable dates and group sizes available.</p>

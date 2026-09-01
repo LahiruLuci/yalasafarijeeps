@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/booking',
     '/safari/morning',
     '/safari/evening',
-    '/safari/full-day',
+    '/safari/tailor-made',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),

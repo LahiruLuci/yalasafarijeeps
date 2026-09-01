@@ -16,8 +16,8 @@ export const metadata = {
 const safariTypeMap: Record<string, string> = {
   "morning": "Morning Safari",
   "evening": "Evening Safari",
-  "full-day": "Full Day Safari",
-  "special": "Custom Safari / Not Sure Yet"
+  "tailor-made": "Tailor-Made Safari",
+  "special": "Tailor-Made Safari"
 };
 
 export default async function BookingPage({

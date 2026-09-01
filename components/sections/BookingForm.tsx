@@ -61,7 +61,20 @@ function BookingFormInner({ initialPackage = "" }: BookingFormProps) {
   };
 
   const generateWhatsAppHref = () => {
-    const text = `Hello Yala Safari Jeeps, I would like to book a safari.
+    let text = "";
+    if (formData.package === "Tailor-Made Safari") {
+      text = `Hi, I'm interested in a Tailor-Made Yala Safari.
+
+Name: ${formData.fullName}
+Preferred date: ${formData.date}
+Number of guests: ${formData.adults} Adults, ${formData.children} Children
+Preferred schedule: ${formData.preferredTime}
+Safari interests: ${formData.specialRequests || 'None specified'}
+Pickup location: ${formData.pickupLocation}
+
+Could you please help me plan the safari?`;
+    } else {
+      text = `Hello Yala Safari Jeeps, I would like to book a safari.
 
 Name: ${formData.fullName}
 WhatsApp: ${formData.whatsapp}
@@ -76,6 +89,7 @@ Country: ${formData.country}
 Special Request: ${formData.specialRequests || 'None'}
 
 Please confirm availability.`;
+    }
 
     return `https://wa.me/61416482262?text=${encodeURIComponent(text)}`;
   };
@@ -225,8 +239,7 @@ Please confirm availability.`;
             >
               <option>Morning Safari</option>
               <option>Evening Safari</option>
-              <option>Full Day Safari</option>
-              <option>Custom Safari / Not Sure Yet</option>
+              <option>Tailor-Made Safari</option>
             </select>
           </div>
 
@@ -255,8 +268,7 @@ Please confirm availability.`;
             >
               <option>Morning</option>
               <option>Evening</option>
-              <option>Full Day</option>
-              <option>Flexible</option>
+              <option>Flexible Schedule</option>
             </select>
           </div>
 
@@ -300,9 +312,9 @@ Please confirm availability.`;
 
         {/* Special Requests */}
         <div className="space-y-2">
-          <label className="text-[10px] font-black uppercase tracking-[0.2em] text-safari-brown/60 ml-2">Special Requests (Optional)</label>
+          <label className="text-[10px] font-black uppercase tracking-[0.2em] text-safari-brown/60 ml-2">Tell us about your preferred safari (Optional)</label>
           <textarea
-            placeholder="Tell us about specific wildlife interests, photography needs, or dietary requirements..."
+            placeholder="Tell us your preferred schedule, interests, group requirements or anything else you'd like us to know..."
             value={formData.specialRequests}
             onChange={e => setFormData({ ...formData, specialRequests: e.target.value })}
             rows={4}

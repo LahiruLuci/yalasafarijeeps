@@ -22,18 +22,18 @@ export const safariPackages: SafariPackage[] = [
     image: "/images/yala-national-park/yala-national-park-sri-lanka-image1.jpg",
     heroImage: "/images/yala-national-park/yala-national-park-sri-lanka-image2.jpg",
     duration: "4-5 Hours",
-    time: "5:30 AM - 10:30 AM",
+    time: "5:30 AM – 10:30 AM",
     highlights: [
-        "Sunrise wildlife photography",
-        "Active leopard tracking",
-        "Birdwatching at dawn",
-        "Block I & II coverage"
+      "Sunrise wildlife photography",
+      "Active leopard tracking",
+      "Birdwatching at dawn",
+      "Block I & II coverage"
     ],
     included: [
-        "Private 4x4 Jeep",
-        "Permits & Taxes",
-        "Expert Guide/Driver",
-        "Hotel Pickup/Drop"
+      "Private 4x4 Jeep",
+      "Permits & Taxes",
+      "Expert Guide/Driver",
+      "Hotel Pickup/Drop"
     ]
   },
   {
@@ -44,43 +44,43 @@ export const safariPackages: SafariPackage[] = [
     longDescription: "The Evening Safari captures the transition from day to night. As the temperature drops, the park's inhabitants become increasingly active. The golden light provides an incredible backdrop for photography, especially as leopards often climb onto rocky outcrops to survey their territory before dusk.",
     image: "/images/yala-national-park/yala-national-park-sri-lanka-image8.jpg",
     heroImage: "/images/yala-national-park/yala-national-park-sri-lanka-image7.jpg",
-    duration: "4 Hours",
-    time: "2:00 PM - 6:00 PM",
+    duration: "3.5 Hours",
+    time: "2:30 PM – 6:00 PM",
     highlights: [
-        "Golden hour photography",
-        "Sunset over the lagoon",
-        "Evening predator activity",
-        "Expert tracking skills"
+      "Golden hour photography",
+      "Sunset over the lagoon",
+      "Evening predator activity",
+      "Expert tracking skills"
     ],
     included: [
-        "Private 4x4 Jeep",
-        "Permits & Taxes",
-        "Expert Guide/Driver",
-        "Hotel Pickup/Drop"
+      "Private 4x4 Jeep",
+      "Permits & Taxes",
+      "Expert Guide/Driver",
+      "Hotel Pickup/Drop"
     ]
   },
   {
-    slug: "full-day",
-    title: "Full Day Safari",
-    subtitle: "The Ultimate Expedition",
-    description: "A comprehensive deep-dive into the heart of Yala, exploring distant corners and forgotten trails for the ultimate encounter.",
-    longDescription: "For the true wildlife enthusiast, the Full Day Safari offers the most comprehensive experience. We delve deep into the less-traveled areas of the park, increasing the chances of unique sightings. This extended duration allows for a more relaxed pace and the opportunity to observe animal behavior in depth.",
+    slug: "tailor-made",
+    title: "Tailor-Made Yala Safari",
+    subtitle: "Your Safari, Your Way",
+    description: "Create a safari experience around your interests, schedule and travel plans. Tell us what you're looking for, and we'll help arrange a personalized Yala safari experience.",
+    longDescription: "Tell us what kind of Yala experience you're looking for, and we'll help create a safari plan around your schedule and interests. We assist with choosing preferred timings, targeting specific wildlife or photography interests, and scheduling pick-ups. Note: Customization is always subject to park regulations, operating conditions, and availability.",
     image: "/images/yala-national-park/yala-national-park-sri-lanka-image5.jpg",
     heroImage: "/images/yala-national-park/yala-national-park-sri-lanka-image1.jpg",
-    duration: "12 Hours",
-    time: "5:00 AM - 6:00 PM",
+    duration: "Customizable",
+    time: "Flexible Schedule",
     highlights: [
-        "Deep park exploration",
-        "Maximum wildlife viewing",
-        "Mid-day lagoon break",
-        "Comprehensive coverage"
+      "Preferred safari timing",
+      "Wildlife & photography interests",
+      "Group requirements accommodation",
+      "Flexible pickup planning"
     ],
     included: [
-        "Private 4x4 Jeep",
-        "Permits & Taxes",
-        "Expert Guide/Driver",
-        "Breakfast & Lunch",
-        "Hotel Pickup/Drop"
+      "Private 4x4 Jeep",
+      "Permits & Taxes",
+      "Expert Guide/Driver",
+      "Flexible custom planning",
+      "Hotel Pickup/Drop"
     ]
   }
 ];

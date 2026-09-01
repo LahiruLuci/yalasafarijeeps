@@ -9,8 +9,8 @@ const highlights = [
         <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>
       </svg>
     ),
-    label: "Highest Leopard Density",
-    detail: "Yala Block I holds the world's highest density of wild leopards per square kilometer.",
+    label: "Renowned Leopard Population",
+    detail: "Yala is highly renowned for its Sri Lankan leopard population, making it one of the country's most popular destinations for leopard watching.",
   },
   {
     icon: (
@@ -134,7 +134,7 @@ export default function SafariIntro() {
             <div className="max-w-xl">
               <span className="text-sunset-gold font-bold text-xs tracking-[0.3em] uppercase block mb-3">Sri Lanka's Crown Jewel</span>
               <p className="text-xl md:text-3xl font-extrabold text-white leading-tight">
-                A UNESCO World Heritage Site & global leopard sanctuary — all in one extraordinary destination.
+                One of Sri Lanka's most iconic national parks & a global leopard sanctuary — all in one extraordinary destination.
               </p>
             </div>
           </div>

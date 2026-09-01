@@ -64,7 +64,7 @@ export default function Schema() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Morning Leopard Safari",
-                "description": "5:30 AM to 10:00 AM expert leopard tracking expedition."
+                "description": "5:30 AM to 10:30 AM expert leopard tracking expedition."
               }
             },
             {
@@ -72,7 +72,15 @@ export default function Schema() {
               "itemOffered": {
                 "@type": "Service",
                 "name": "Evening Sunset Safari",
-                "description": "2:30 PM to 6:30 PM wildlife photography expedition."
+                "description": "2:30 PM to 6:00 PM wildlife photography expedition."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Tailor-Made Yala Safari",
+                "description": "Customizable private safari with flexible scheduling and tailored itinerary."
               }
             }
           ]

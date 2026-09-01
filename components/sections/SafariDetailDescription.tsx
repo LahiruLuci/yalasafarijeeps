@@ -13,12 +13,12 @@ const timelineSteps = [
   {
     step: "02",
     title: "Park Gate Entry",
-    desc: "We secure priority entry with pre-arranged permits and trackers briefed on recent activity.",
+    desc: "We efficiently manage your entry with pre-arranged permits and discuss recent wildlife activity.",
   },
   {
     step: "03",
     title: "Active Wildlife Zones",
-    desc: "We navigate deep into exclusive corridors beyond the reach of typical tourist jeeps.",
+    desc: "Our experienced safari drivers plan routes based on park conditions, wildlife activity and their local knowledge of Yala.",
   },
   {
     step: "04",

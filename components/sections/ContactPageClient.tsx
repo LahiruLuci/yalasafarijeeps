@@ -27,7 +27,7 @@ const faqs = [
     },
     {
         q: "What information should I send?",
-        a: "Share your safari date, preferred package (morning, evening, or full day), number of adults and children, and your pickup location. That is all we need to get started.",
+        a: "Share your safari date, preferred package (morning, evening, or tailor-made safari), number of adults and children, and your pickup location. That is all we need to get started.",
     },
     {
         q: "How fast do you reply?",
@@ -222,7 +222,7 @@ Please contact me at your earliest convenience.`;
                     >
                         <option>Morning Safari</option>
                         <option>Evening Safari</option>
-                        <option>Full Day Safari</option>
+                        <option>Tailor-Made Safari</option>
                         <option>Not Sure Yet</option>
                     </select>
                 </div>

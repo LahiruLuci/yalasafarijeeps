@@ -49,6 +49,21 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/stay/chena-huts',
+        destination: '/stay/uga-chena-huts-yala',
+        permanent: true,
+      },
+      {
+        source: '/stay/cinnamon-wild',
+        destination: '/stay/cinnamon-wild-yala',
+        permanent: true,
+      },
+      {
+        source: '/safari/full-day',
+        destination: '/safari/tailor-made',
+        permanent: true,
+      },
     ];
   },
 };

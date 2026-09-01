@@ -11,7 +11,7 @@ const accommodations = [
     image: "/images/chena-huts/chena-huts-home-1.jpg",
     stars: 5,
     description: "Where the untamed jungle meets the rolling surf. Private pool pavilions nestled amongst the coastal scrub.",
-    href: "/stay/chena-huts",
+    href: "/stay/uga-chena-huts-yala",
   },
   {
     id: "cinnamon-wild",
@@ -20,16 +20,16 @@ const accommodations = [
     image: "/images/cinnamon-wild/cinnamon-wild-home-1.jpg",
     stars: 5,
     description: "Rustic luxury chalets blending seamlessly into the jungle, offering world-class comfort with wilderness at your doorstep.",
-    href: "/stay/cinnamon-wild",
+    href: "/stay/cinnamon-wild-yala",
   },
   {
-    id: "rock-wild",
-    name: "Rock Wild Yala",
-    type: "Boutique Villa",
-    image: "/images/rock-wild-yala/rock-wild-yala-home-1.jpg",
-    stars: 4,
-    description: "An intimate and serene escape offering personalized service, authentic cuisine, and a deeply localized safari experience.",
-    href: "/stay/rock-wild",
+    id: "jetwing-yala",
+    name: "Jetwing Yala",
+    type: "Coastal Safari Resort",
+    image: "/images/jetwin-yala/jetwin-yala.jpg",
+    stars: 5,
+    description: "A full-service resort set on a sprawling coastal wilderness property near Yala National Park.",
+    href: "/stay/jetwing-yala",
   },
 ];
 

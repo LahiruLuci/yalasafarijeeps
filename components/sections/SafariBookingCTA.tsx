@@ -55,7 +55,7 @@ export default function SafariBookingCTA({ safari }: { safari: SafariPackage }) 
                 <span className="italic text-olive-green">The Wild?</span>
               </h2>
               <p className="text-safari-brown/70 text-lg font-medium leading-relaxed">
-                Spots fill quickly — especially during peak season. Reserve your {safari.title} with us today and guarantee an extraordinary, private wildlife encounter.
+                Spots fill quickly — especially during peak season. Reserve your {safari.title} with us today and prepare for an extraordinary, private wildlife encounter.
               </p>
             </div>
 

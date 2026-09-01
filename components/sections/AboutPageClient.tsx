@@ -41,7 +41,7 @@ const helpCards = [
     },
     {
         title: "Safari Planning",
-        desc: "Support for Morning (6am), Evening (2pm), and Full Day (12hr) safari options.",
+        desc: "Support for Morning (5:30am), Evening (2:30pm), and flexible Tailor-Made safari options.",
         icon: (
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <circle cx="12" cy="12" r="10" />
