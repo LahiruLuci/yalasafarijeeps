@@ -64,7 +64,7 @@ export default function SafariIntro() {
             </blockquote>
 
             <p className="text-lg text-safari-brown/70 leading-relaxed mb-12">
-              Spanning over 979 square kilometers, Yala National Park is Sri Lanka's most visited and second-largest national park. Our expeditions focus exclusively on Block I — the richest zone — delivering encounters that rival the greatest wildlife reserves on earth.
+              Spanning over 979 square kilometers, Yala National Park is Sri Lanka's most visited and second-largest national park. Our expeditions focus heavily on Block I — the most popular zone — aiming to deliver encounters that rival the greatest wildlife reserves on earth.
             </p>
 
             {/* Key Highlights */}

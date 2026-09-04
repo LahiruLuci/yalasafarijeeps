@@ -17,7 +17,7 @@ const safariTypes = [
     href: "/safari/morning",
     accentColor: "bg-[#D07A3F]",
     description:
-      "Begin your journey before sunrise while stars fade over the horizon. The morning hours are the prime window for leopard sightings as they stalk the golden scrubland. You'll also witness a jaw-dropping Yala dawn that no photograph can ever fully capture.",
+      "Begin your journey before sunrise while stars fade over the horizon. The morning hours offer excellent opportunities for wildlife viewing, with cooler temperatures increasing the chance for potential leopard sightings. You'll also witness a jaw-dropping Yala dawn that no photograph can ever fully capture.",
     included: ["Private 4x4 Safari Jeep", "Experienced Driver/Guide", "Local Pickup & Drop-off", "Bottled Water", "Park Entry Assistance"],
     bgGradient: "from-[#D07A3F]/80",
   },
@@ -33,7 +33,7 @@ const safariTypes = [
     href: "/safari/evening",
     accentColor: "bg-olive-green",
     description:
-      "As the afternoon sun softens, prey animals emerge from the shade and predators ignite their evening hunt. The golden hour light transforms Yala into a palette of amber and ochre, creating a dramatic cinematic experience unlike any morning drive.",
+      "As the afternoon sun softens, prey animals emerge from the shade and predators often become more active. The golden hour light transforms Yala into a palette of amber and ochre, creating a dramatic cinematic experience unlike any morning drive.",
     included: ["Private 4x4 Safari Jeep", "Experienced Driver/Guide", "Local Pickup & Drop-off", "Bottled Water", "Park Entry Assistance"],
     bgGradient: "from-olive-green/80",
   },

@@ -23,9 +23,9 @@ const experiences = [
   },
   {
     id: "03",
-    title: "Unrestricted Encounters",
+    title: "Authentic Encounters",
     subtitle: "Closer to the Magic",
-    description: "Because of our deep familiarity with the park's sectors, we proactively divert from crowded tourist hotspots, guiding you into secluded corridors for intimate, uninterrupted encounters with leopards, elephants, and sloth bears in their natural habitat.",
+    description: "Our drivers use their deep familiarity with the park's sectors to select optimal routes based on current conditions and wildlife activity, striving to provide authentic, uninterrupted encounters with the wilderness.",
     image: "/images/slider/slide-2.jpg",
     accent: "text-soft-beige",
     border: "border-soft-beige",
@@ -35,19 +35,19 @@ const experiences = [
 export default function ExperienceOverview() {
   return (
     <section className="bg-deep-charcoal py-24 md:py-40 relative px-4 md:px-8">
-      
+
       {/* Abstract Background Noise */}
       <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] mix-blend-overlay pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative z-10 w-full">
-        
+
         {/* Section Intro */}
         <div className="text-center max-w-3xl mx-auto mb-20 md:mb-32">
           <span className="text-sunset-gold font-bold text-sm tracking-[0.4em] uppercase mb-6 block">
             Anatomy of an Expedition
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-8">
-            The Safari <br/>
+            The Safari <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-soft-beige via-sunset-gold to-soft-beige">
               Experience
             </span>
@@ -59,23 +59,23 @@ export default function ExperienceOverview() {
 
         {/* Sticky Stacking Cards Container */}
         <div className="relative flex flex-col gap-12 md:gap-24 lg:gap-0 pb-32">
-          
+
           {experiences.map((exp, index) => {
             // Calculate a slight scale down for older stacked cards based on their index.
             // But since sticky just sits there, we don't need JS scaling, just rely on the pure overlap.
-            
+
             return (
-              <div 
+              <div
                 key={exp.id}
                 className="lg:sticky w-full h-auto lg:h-[80vh] min-h-[500px] flex items-center justify-center pt-0 lg:pt-10"
-                style={{ 
+                style={{
                   top: `8vh`, // Snap slightly higher to give more room
-                  zIndex: index * 10 
+                  zIndex: index * 10
                 }}
               >
                 {/* The Card Itself */}
                 <div className="relative w-full h-full flex flex-col lg:flex-row bg-[#1a1914] rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-[0_-20px_50px_rgba(0,0,0,0.8)] border border-white/5 transform transition-transform duration-500 hover:-translate-y-2">
-                  
+
                   {/* Left Imagery Panel */}
                   <div className="w-full lg:w-1/2 relative h-64 lg:h-full overflow-hidden group">
                     <Image
@@ -86,7 +86,7 @@ export default function ExperienceOverview() {
                       className="object-cover transform transition-transform duration-[10s] ease-out group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#1a1914] lg:via-transparent via-[#1a1914]/80 to-transparent" />
-                    
+
                     {/* Massive Floating Number */}
                     <div className="absolute -bottom-10 -left-6 lg:bottom-12 lg:-right-12 text-[10rem] font-black leading-none text-white/5 z-10 pointer-events-none drop-shadow-2xl">
                       {exp.id}
@@ -106,7 +106,7 @@ export default function ExperienceOverview() {
                     <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 lg:mb-4 leading-tight">
                       {exp.title}
                     </h3>
-                    
+
                     <h4 className={`text-base md:text-lg font-bold mb-6 lg:mb-8 uppercase tracking-widest ${exp.accent} opacity-80`}>
                       {exp.subtitle}
                     </h4>
@@ -120,7 +120,7 @@ export default function ExperienceOverview() {
               </div>
             );
           })}
-          
+
         </div>
       </div>
     </section>

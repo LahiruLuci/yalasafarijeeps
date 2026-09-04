@@ -18,14 +18,14 @@ export const safariPackages: SafariPackage[] = [
     title: "Morning Safari",
     subtitle: "The Awakening Wilderness",
     description: "Witness the jungle come to life as the first rays of sun pierce through the canopy, revealing Yala's active predators.",
-    longDescription: "Our Morning Safari is designed for those who want to experience the park at its most active. Starting before sunrise, we position ourselves to witness the awakening of the wild. This is often the best time to spot leopards as they emerge from their night hunts and sloth bears as they forage before the heat of the day sets in.",
+    longDescription: "Our Morning Safari is designed for those who want to experience the park at its most active. Starting before sunrise, we position ourselves to witness the awakening of the wild. Morning safaris can offer good opportunities for wildlife viewing, including possible leopard sightings, while temperatures are cooler.",
     image: "/images/yala-national-park/yala-national-park-sri-lanka-image1.jpg",
     heroImage: "/images/yala-national-park/yala-national-park-sri-lanka-image2.jpg",
     duration: "4-5 Hours",
     time: "5:30 AM – 10:30 AM",
     highlights: [
       "Sunrise wildlife photography",
-      "Active leopard tracking",
+      "Possible leopard sightings",
       "Birdwatching at dawn",
       "Block I & II coverage"
     ],
@@ -42,7 +42,7 @@ export const safariPackages: SafariPackage[] = [
     title: "Evening Safari",
     subtitle: "The Golden Hour Prowl",
     description: "Experience the magic of the golden hour as the predators emerge for their nightly hunt under the amber Sri Lankan sky.",
-    longDescription: "The Evening Safari captures the transition from day to night. As the temperature drops, the park's inhabitants become increasingly active. The golden light provides an incredible backdrop for photography, especially as leopards often climb onto rocky outcrops to survey their territory before dusk.",
+    longDescription: "The Evening Safari captures the transition from day to night. As the temperature drops, the park's inhabitants become increasingly active. The softer evening light and cooler conditions can create excellent opportunities for wildlife observation and photography, with possible sightings including Sri Lankan leopards and elephants.",
     image: "/images/yala-national-park/yala-national-park-sri-lanka-image8.jpg",
     heroImage: "/images/yala-national-park/yala-national-park-sri-lanka-image7.jpg",
     duration: "3.5 Hours",
@@ -51,7 +51,7 @@ export const safariPackages: SafariPackage[] = [
       "Golden hour photography",
       "Sunset over the lagoon",
       "Evening predator activity",
-      "Expert tracking skills"
+      "Experienced safari drivers"
     ],
     included: [
       "Private 4x4 Safari Jeep",

@@ -13,7 +13,7 @@ const timelineSteps = [
   {
     step: "02",
     title: "Park Gate Entry",
-    desc: "We efficiently manage your entry with pre-arranged permits and discuss recent wildlife activity.",
+    desc: "We assist with the park entry process and discuss recent wildlife activity before beginning the safari.",
   },
   {
     step: "03",
