@@ -6,24 +6,21 @@ import Link from "next/link";
 const categories = [
    {
       title: "Luxury Lodges",
-      subtitle: "UNCOMPROMISED OPULENCE",
+      subtitle: "PREMIUM COMFORT",
       image: "/images/luxury-lodges.webp",
-      description: "Architectural marvels nestled in the heart of the national park, where every detail is crafted for your absolute comfort.",
-      features: ["Private Plunge Pools", "Personalized Butler Service", "All-Inclusive Dining"]
+      description: "Comfortable premium properties for travellers seeking privacy, resort facilities and high-end accommodation."
    },
    {
-      title: "Safari Tents",
-      subtitle: "AUTHENTIC GLAMPING",
+      title: "Safari Camps",
+      subtitle: "NATURE IMMERSION",
       image: "/images/safari-tents.webp",
-      description: "Experience the true essence of the wild from the safety of our custom-designed, luxury tented camps situated at the park boundaries.",
-      features: ["Starlit Sleepouts", "Campfire Gastronomy", "Proximity to the Wild"]
+      description: "Nature-focused accommodation for travellers who want a more immersive wildlife atmosphere."
    },
    {
-      title: "Boutique Resorts",
-      subtitle: "MODERN WILDERNESS",
+      title: "Resorts & Boutique",
+      subtitle: "MODERN CONVENIENCE",
       image: "/images/boutique-resorts.webp",
-      description: "A fusion of contemporary design and natural textures, these resorts offer a secluded escape with a focus on relaxation and tranquility.",
-      features: ["Thematic Designs", "Wellness & Spa", "Curated Experiences"]
+      description: "Comfortable options around Yala, Kirinda and Tissamaharama offering great amenities for safari travelers."
    }
 ];
 
@@ -42,16 +39,16 @@ export default function StayCategories() {
             <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between mb-24 gap-8">
                <div className="max-w-3xl">
                   <span className="text-sunset-gold font-bold text-sm tracking-[0.6em] uppercase mb-8 block">
-                     Choose Your Style
+                     Choose Your Stay Style
                   </span>
-                  <h2 className="text-6xl md:text-8xl font-extrabold text-soft-beige leading-none tracking-tighter">
+                  <h2 className="text-5xl md:text-7xl font-extrabold text-soft-beige leading-none tracking-tighter">
                      Explore Stay <br />
                      <span className="italic text-sunset-gold font-light font-serif">Categories</span>
                   </h2>
                </div>
                <div className="max-w-sm">
                   <p className="text-warm-sand/40 text-lg font-medium leading-relaxed italic">
-                     Whether you crave the luxury of a private pool or the thrill of a designer tent, we have the perfect stay for your safari.
+                     Whether you crave the luxury of a premium lodge or the thrill of a safari tent, we can help you figure out the best fit.
                   </p>
                </div>
             </div>
@@ -98,17 +95,8 @@ export default function StayCategories() {
                               {cat.description}
                            </p>
 
-                           <div className="space-y-4 mb-10">
-                              {cat.features.map((feature, fIdx) => (
-                                 <div key={fIdx} className="flex items-center gap-3 text-[11px] text-soft-beige font-black uppercase tracking-widest">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-sunset-gold shadow-[0_0_8px_rgba(208,122,63,0.8)]" />
-                                    {feature}
-                                 </div>
-                              ))}
-                           </div>
-
-                           <Link href="/booking" className="flex items-center gap-4 text-soft-beige group/btn">
-                              <span className="font-black text-xs tracking-widest uppercase">BOOK NOW</span>
+                           <Link href="#curated-stays" className="flex items-center gap-4 text-soft-beige group/btn">
+                              <span className="font-black text-xs tracking-widest uppercase">View Recommendations</span>
                               <div className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center transition-all group-hover/btn:bg-soft-beige group-hover/btn:text-deep-charcoal group-hover/btn:scale-110">
                                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                               </div>

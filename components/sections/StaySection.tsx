@@ -9,7 +9,6 @@ const accommodations = [
     name: "Chena Huts by Uga",
     type: "Luxury Resort",
     image: "/images/chena-huts/chena-huts-home-1.jpg",
-    stars: 5,
     description: "Where the untamed jungle meets the rolling surf. Private pool pavilions nestled amongst the coastal scrub.",
     href: "/stay/uga-chena-huts-yala",
   },
@@ -18,7 +17,6 @@ const accommodations = [
     name: "Cinnamon Wild Yala",
     type: "Premium Lodge",
     image: "/images/cinnamon-wild/cinnamon-wild-home-1.jpg",
-    stars: 5,
     description: "Rustic luxury chalets blending seamlessly into the jungle, offering world-class comfort with wilderness at your doorstep.",
     href: "/stay/cinnamon-wild-yala",
   },
@@ -27,7 +25,6 @@ const accommodations = [
     name: "Jetwing Yala",
     type: "Coastal Safari Resort",
     image: "/images/jetwin-yala/jetwin-yala.jpg",
-    stars: 5,
     description: "A full-service resort set on a sprawling coastal wilderness property near Yala National Park.",
     href: "/stay/jetwing-yala",
   },
@@ -89,13 +86,6 @@ export default function StaySection() {
                 </div>
 
                 <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex text-sunset-gold mb-2">
-                    {[...Array(lodging.stars)].map((_, i) => (
-                      <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                      </svg>
-                    ))}
-                  </div>
                   <h3 className="text-2xl font-extrabold text-white">
                     {lodging.name}
                   </h3>

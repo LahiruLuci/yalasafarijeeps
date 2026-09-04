@@ -23,7 +23,7 @@ export default function BookingFAQ() {
         },
         {
             question: "What time does the morning safari start?",
-            answer: "The morning safari officially operates from 5:30 AM to 10:30 AM. We pick you up accordingly to ensure you are lined up for the park gates opening at 6:00 AM."
+            answer: "The morning safari officially operates from 5:30 AM to 10:30 AM. We pick you up accordingly to ensure you are ready for the park gates opening."
         },
         {
             question: "What should I bring?",

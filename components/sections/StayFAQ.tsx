@@ -4,24 +4,24 @@ import { useState } from "react";
 
 const faqs = [
    {
-      question: "Which lodge is closest to the main Yala National Park entrance?",
-      answer: "Chena Huts and Cinnamon Wild are strategically located within 5-10 minutes of the Palatupana (Gate 1) entrance, ensuring you are among the first to enter the park for peak leopard tracking hours."
+      question: "Where should I stay for a Yala safari?",
+      answer: "We recommend staying in Tissamaharama, Palatupana, Kirinda, or Yala itself. These areas offer the easiest access to the park gates for early morning departures."
    },
    {
-      question: "Are safari pickups included in our stay booking?",
-      answer: "While some luxury all-inclusive stays like Chena Huts include safaris, others require separate booking. However, Yala Safari Jeeps provides seamless door-to-door pickup and return for all recommended lodges in the area."
+      question: "Can Yala Safari Jeeps arrange pickup from my hotel?",
+      answer: "Yes, we arrange pickups from accommodations around the Yala, Tissamaharama, Kirinda, and Kataragama areas. If you are staying further away, we can also organize transfers for an additional fee."
    },
    {
-      question: "Is it safe to stay in the wilderness lodges and tented camps?",
-      answer: "Absolutely. All our recommended sanctuaries feature 24/7 high-end security, electric fencing where necessary, and expert naturalists on-site. You experience the raw wild with total peace of mind."
+      question: "Do you book hotels directly?",
+      answer: "At present, our accommodation pages are provided to help travellers research places to stay near Yala. Contact us if you would like help coordinating your safari plans around your accommodation."
    },
    {
-      question: "Do the luxury tents have modern amenities like Air Conditioning?",
-      answer: "Yes. Premium camps like Leopard Nest and Chena Huts feature custom-designed pavilions with full air conditioning, private en-suite bathrooms, and high-speed Wi-Fi, blending raw nature with modern luxury."
+      question: "Can you help me plan my safari around my accommodation?",
+      answer: "Absolutely. Once you decide where you are staying, let us know via WhatsApp. We will help you schedule the best safari departure time based on your location and park conditions."
    },
    {
-      question: "Do we need to book our stay and safari months in advance?",
-      answer: "Yala is a world-renowned destination. We highly recommend booking at least 3-6 months in advance, especially for peak seasons (February to June), to secure your preferred sanctuary and expert tracker."
+      question: "Are hotel prices shown on this website?",
+      answer: "No, hotel prices are not shown here as they vary by season and booking platform. We provide this curated guide solely to assist you in selecting the right base for your Yala safari."
    }
 ];
 
@@ -60,7 +60,7 @@ export default function StayFAQ() {
                      </div>
                      <div>
                         <p className="text-deep-charcoal font-black text-sm uppercase tracking-widest">Still have questions?</p>
-                        <a href="mailto:info@yalasafarijeeps.com" className="text-sunset-gold font-bold text-xs uppercase border-b border-sunset-gold pb-0.5 hover:text-olive-green hover:border-olive-green transition-colors inline-block mt-1">Contact Our Concierge</a>
+                        <a href="mailto:info@yalasafarijeeps.com" className="text-sunset-gold font-bold text-xs uppercase border-b border-sunset-gold pb-0.5 hover:text-olive-green hover:border-olive-green transition-colors inline-block mt-1">Contact Our Team</a>
                      </div>
                   </div>
                </div>
@@ -71,8 +71,8 @@ export default function StayFAQ() {
                      <div
                         key={idx}
                         className={`group relative overflow-hidden transition-all duration-700 rounded-[2.5rem] border ${openIndex === idx
-                              ? 'bg-white shadow-[0_30px_60px_rgba(43,42,34,0.1)] border-sunset-gold/20'
-                              : 'bg-white/40 border-white/60 hover:bg-white/60'
+                           ? 'bg-white shadow-[0_30px_60px_rgba(43,42,34,0.1)] border-sunset-gold/20'
+                           : 'bg-white/40 border-white/60 hover:bg-white/60'
                            }`}
                      >
                         <button

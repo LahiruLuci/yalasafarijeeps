@@ -31,53 +31,33 @@ export default function StayHero() {
           <div className="flex items-center gap-4 mb-8 overflow-hidden">
             <div className="h-px w-12 bg-sunset-gold/50" />
             <span className="text-sunset-gold font-bold text-xs md:text-sm tracking-[0.5em] uppercase">
-              Redefining Wilderness Luxury
+              Places to Stay Near Yala
             </span>
           </div>
 
           {/* Main Typography Stack */}
           <div className="relative mb-12">
-            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black text-soft-beige leading-[0.85] tracking-tighter mix-blend-plus-lighter opacity-90 mb-4">
-              WILD<br />
-              <span className="text-sunset-gold italic font-light font-serif">Sanctuaries</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-soft-beige leading-[1.1] tracking-tighter mix-blend-plus-lighter opacity-90 mb-6">
+              Accommodation Near<br />
+              <span className="text-sunset-gold italic font-light font-serif">Yala National Park</span>
             </h1>
-            <p className="max-w-xl text-lg md:text-xl text-warm-sand/80 font-medium leading-relaxed pl-2 border-l-2 border-sunset-gold/30 italic">
-              From starlit tents to architectural marvels, discover our handpicked collection of the most exclusive retreats in Yala National Park.
+            <p className="max-w-xl text-lg md:text-xl text-warm-sand/80 font-medium leading-relaxed pl-4 border-l-2 border-sunset-gold/30 italic">
+              Discover a selection of hotels, lodges and safari-style stays around Yala, Tissamaharama, Kirinda and the surrounding area.
             </p>
           </div>
 
           {/* ── CTA & Interaction Row ── */}
-          <div className="flex flex-wrap items-center gap-8 pl-2">
-            <a href="#curated-stays" className="group flex items-center gap-4 bg-sunset-gold hover:bg-sunset-gold/90 text-deep-charcoal font-black py-5 px-10 rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(208,122,63,0.3)]">
-              EXPLORE RETREATS
+          <div className="flex flex-wrap items-center gap-6 pl-2">
+            <a href="#curated-stays" className="group flex items-center gap-4 bg-sunset-gold hover:bg-sunset-gold/90 text-deep-charcoal font-black py-4 px-8 rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_rgba(208,122,63,0.3)]">
+              EXPLORE STAYS
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 transition-transform group-hover:translate-x-2">
                 <path d="M18 8L22 12L18 16" /><path d="M2 12H22" />
               </svg>
             </a>
 
-            <div className="flex items-center gap-6">
-              <div className="flex -space-x-3">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-12 h-12 rounded-full border-2 border-deep-charcoal bg-olive-green/20 overflow-hidden relative flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-sunset-gold/40">
-                      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" />
-                    </svg>
-                  </div>
-                ))}
-              </div>
-              <div className="text-sm">
-                <div className="flex items-center gap-1 text-sunset-gold mb-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-soft-beige/60 font-bold uppercase tracking-widest text-[10px]">
-                  Loved by 2,000+ Guests
-                </p>
-              </div>
-            </div>
+            <a href="/contact" className="group flex items-center gap-4 bg-transparent border-2 border-soft-beige/20 hover:border-sunset-gold text-soft-beige font-black py-4 px-8 rounded-full transition-all hover:scale-105 active:scale-95">
+              PLAN YOUR SAFARI
+            </a>
           </div>
         </div>
       </div>
@@ -94,9 +74,9 @@ export default function StayHero() {
               <path d="M9.6 4.6A2 2 0 1 1 11 8H2" />
               <path d="M12.6 19.4A2 2 0 1 0 14 16H2" />
             </svg>
-            <h3 className="text-soft-beige font-bold text-xl mb-2 italic">Eco-Conscious Comfort</h3>
+            <h3 className="text-soft-beige font-bold text-xl mb-2 italic">Nature-Focused</h3>
             <p className="text-warm-sand/50 text-sm leading-relaxed">
-              Every lodge is chosen for its commitment to preserving the delicate Yala ecosystem without compromising luxury.
+              Discover properties that allow you to unwind surrounded by the beauty of the Sri Lankan wilderness.
             </p>
           </div>
 
@@ -106,9 +86,9 @@ export default function StayHero() {
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-sunset-gold mb-4">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
-            <h3 className="text-soft-beige font-bold text-xl mb-2 italic">Ultimate Seclusion</h3>
+            <h3 className="text-soft-beige font-bold text-xl mb-2 italic">Convenient Safari Logistics</h3>
             <p className="text-warm-sand/50 text-sm leading-relaxed">
-              Remote locations ensuring absolute privacy and an undisturbed connection with the Sri Lankan wilderness.
+              Explore stays located in nearby areas like Tissamaharama and Kirinda, perfect for early morning park access.
             </p>
           </div>
 

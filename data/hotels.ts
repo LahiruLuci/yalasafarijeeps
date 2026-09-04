@@ -62,7 +62,7 @@ export const hotels: HotelData[] = [
         slug: "cinnamon-wild-yala",
         name: "Cinnamon Wild Yala",
         category: "Wildlife Resort",
-        location: "Yala National Park Zone",
+        location: "Yala Area",
         shortDescription: "A renowned wildlife resort offering seamless immersion into the natural wilderness surrounding Yala.",
         description: "Cinnamon Wild Yala is a wildlife-focused resort that places guests right on the boundary of Sri Lanka's most famous wilderness. Featuring 68 thoughtfully designed chalets, including Beach Chalets and wilderness-oriented spaces, the resort provides a deeply authentic natural atmosphere without compromising on comfort. Many accommodations include private terraces offering stunning views toward the coast or the surrounding wildlife landscape. With modern conveniences like Wi-Fi, accessible parking, and quality room amenities, Cinnamon Wild stands out as a prime destination for travellers wanting a classic resort experience intimately tied to Yala’s wildlife.",
         facilities: [
@@ -136,7 +136,7 @@ export const hotels: HotelData[] = [
         slug: "leopard-trails-yala",
         name: "Leopard Trails Yala",
         category: "Tented Safari Experience",
-        location: "Yala Wilderness Area",
+        location: "Yala Area",
         shortDescription: "An immersive tented safari camp blending classic explorer aesthetics with modern comforts.",
         description: "Leopard Trails Yala brings the classic romance of the African-style safari into the heart of the Sri Lankan wilderness. This tented camp offers both Deluxe Tents and larger suite-style tented accommodation, perfect for individuals and families wanting a deeply immersive experience. Despite the canvas walls, each tent is equipped with real beds, private en-suite bathroom facilities, and charging points for modern convenience. Surrounded by the sounds of the jungle, guests are treated to a captivating atmosphere that extends the excitement of a wildlife drive throughout the night. It is the perfect choice for the adventurous traveller looking for authenticity and comfort.",
         facilities: [

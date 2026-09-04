@@ -18,7 +18,7 @@ const stays = [
   {
     name: "Cinnamon Wild Yala",
     type: "Wildlife Resort",
-    location: "Yala National Park Zone",
+    location: "Yala Area",
     image: "/images/cinnamon-wild/cinnamon-wild-home-1.jpg",
     description: "A renowned wildlife resort offering seamless immersion into the natural wilderness surrounding Yala.",
     tags: ["Wildlife View", "Resort", "Nature"],
@@ -38,7 +38,7 @@ const stays = [
   {
     name: "Leopard Trails Yala",
     type: "Tented Safari Experience",
-    location: "Yala Wilderness Area",
+    location: "Yala Area",
     image: "/images/cinnamon-wild/cinnamon-wild-hotel-yala-2.jpg", // Using placeholder image from existing assets
     description: "An immersive tented safari camp blending classic explorer aesthetics with modern comforts.",
     tags: ["Glamping", "Authentic", "Nature"],

@@ -4,34 +4,34 @@ import Image from "next/image";
 
 const whyStayPoints = [
    {
-      title: "The Gold Standard",
-      desc: "Every recommendation passes our elite luxury and safety audits. A literal seal of master craftsmanship.",
-      stat: "100%",
-      statLabel: "Vetted"
+      title: "Safari Convenience",
+      desc: "Properties located around Yala, Tissamaharama or Kirinda to ensure easy departures for your early morning safari.",
+      stat: "Location",
+      statLabel: "Priority"
    },
    {
-      title: "Proximity Edge",
-      desc: "Ideally situated within a 5-10 minute drive to the park gates. Maximize your early morning safari time.",
-      stat: "05",
-      statLabel: "Mins Away"
+      title: "Comfort Focus",
+      desc: "From reliable A/C to modern amenities, we favor accommodations that give you a restful base to recover from the wild.",
+      stat: "Relax",
+      statLabel: "Target"
    },
    {
-      title: "Nocturnal Pulse",
-      desc: "Hearing the wild breathe from the sanctuary of your veranda. Uninhibited connection with nature.",
-      stat: "24/7",
-      statLabel: "Immersion"
+      title: "Distinct Styles",
+      desc: "We list everything from fully equipped luxury resorts to boutique tented camps to suit different travel styles.",
+      stat: "Variety",
+      statLabel: "Options"
    },
    {
-      title: "Elite Sanctuary",
-      desc: "Peace of mind redefined with 24/7 high-end security and the finest modern amenities.",
-      stat: "Safe",
-      statLabel: "Standard"
+      title: "Transparent Info",
+      desc: "We aim to present these properties honestly, allowing you to review real facilities and compare options easily.",
+      stat: "Clear",
+      statLabel: "Data"
    },
    {
-      title: "Local Legacy",
-      desc: "Every stay supports the indigenous communities and focuses on sustainable eco-tourism.",
-      stat: "Eco",
-      statLabel: "Impact"
+      title: "Local Connection",
+      desc: "Highlighting places in the Southern Province that fit the ecosystem and showcase Sri Lankan hospitality.",
+      stat: "Local",
+      statLabel: "Focus"
    }
 ];
 
@@ -67,15 +67,15 @@ export default function StayWhyChooseUs() {
                   <span className="text-sunset-gold font-bold text-sm tracking-[0.5em] uppercase mb-8 block drop-shadow-md">
                      Our Selection Standard
                   </span>
-                  <h2 className="text-6xl md:text-8xl lg:text-9xl font-black text-soft-beige leading-[0.8] tracking-tighter italic">
-                     Why Choose <br />
-                     <span className="text-sunset-gold drop-shadow-[0_0_20px_rgba(208,122,63,0.4)]">Our Lodges?</span>
+                  <h2 className="text-5xl md:text-7xl lg:text-8xl font-black text-soft-beige leading-[0.9] tracking-tight">
+                     How We Choose <br />
+                     <span className="text-sunset-gold italic drop-shadow-[0_0_20px_rgba(208,122,63,0.4)]">Accommodation to Feature</span>
                   </h2>
                </div>
 
                <div className="max-w-md p-10 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[3rem] group-hover:border-sunset-gold/30 transition-colors">
-                  <p className="text-warm-sand/60 text-lg leading-relaxed font-serif italic">
-                     &quot;Luxury in the wild is silent. It is the peace of knowing your santuary is as untamed as the landscape, yet as secure as a fortress.&quot;
+                  <p className="text-warm-sand/80 text-sm leading-relaxed italic">
+                     We aim to feature accommodation options that may suit travellers planning a Yala safari. Guests should always confirm current facilities, availability and property policies directly before booking.
                   </p>
                </div>
             </div>
