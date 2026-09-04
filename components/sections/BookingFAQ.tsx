@@ -10,12 +10,12 @@ export default function BookingFAQ() {
             answer: "No upfront payment is required at the time of inquiry. We first verify park availability and guide schedules. Once confirmed, we will discuss payment options with you via WhatsApp."
         },
         {
-            question: "Can you pick me up from my hotel?",
-            answer: "Yes! We offer free hotel pickup and drop-off from any location in Tissamaharama, Kataragama, Kirinda, and Yala. We also arrange pickups from further locations like Ella, Mirissa, or Tangalle for an additional fee."
+            question: "Is hotel pickup included?",
+            answer: "Complimentary pickup and drop-off are available from selected locations around Yala, Tissamaharama, Kirinda and Kataragama. Transfers from more distant locations can be arranged at an additional charge."
         },
         {
-            question: "Are park entrance tickets included?",
-            answer: "Our standard package includes the private jeep and expert guide. Park entrance fees are paid separately at the gate. However, we can handle the ticket purchase for you in advance to save time — just let us know in your request."
+            question: "Are Yala National Park entrance tickets included?",
+            answer: "Yala National Park entrance tickets are not included in the standard safari price unless specifically stated in your quotation. We can assist with arranging the ticket purchase in advance for your convenience."
         },
         {
             question: "Can I book a private jeep?",

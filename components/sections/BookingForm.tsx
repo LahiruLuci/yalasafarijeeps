@@ -65,30 +65,21 @@ function BookingFormInner({ initialPackage = "" }: BookingFormProps) {
     if (formData.package === "Tailor-Made Safari") {
       text = `Hi, I'm interested in a Tailor-Made Yala Safari.
 
-Name: ${formData.fullName}
 Preferred date: ${formData.date}
 Number of guests: ${formData.adults} Adults, ${formData.children} Children
 Preferred schedule: ${formData.preferredTime}
-Safari interests: ${formData.specialRequests || 'None specified'}
+Pickup location: ${formData.pickupLocation}
+Safari preferences: ${formData.specialRequests || 'None specified'}
+
+Please help me plan the safari and confirm the inclusions and park entrance arrangements.`;
+    } else {
+      text = `Hi, I'm interested in the ${formData.package}.
+
+Preferred date: ${formData.date}
+Number of guests: ${formData.adults} Adults, ${formData.children} Children
 Pickup location: ${formData.pickupLocation}
 
-Could you please help me plan the safari?`;
-    } else {
-      text = `Hello Yala Safari Jeeps, I would like to book a safari.
-
-Name: ${formData.fullName}
-WhatsApp: ${formData.whatsapp}
-Email: ${formData.email}
-Safari Package: ${formData.package}
-Date: ${formData.date}
-Time: ${formData.preferredTime}
-Adults: ${formData.adults}
-Children: ${formData.children}
-Pickup Location: ${formData.pickupLocation}
-Country: ${formData.country}
-Special Request: ${formData.specialRequests || 'None'}
-
-Please confirm availability.`;
+Please send me the final price and confirm what is included, including park entrance tickets and pickup arrangements.`;
     }
 
     return `https://wa.me/61416482262?text=${encodeURIComponent(text)}`;
@@ -320,6 +311,10 @@ Please confirm availability.`;
             rows={4}
             className="w-full bg-warm-sand/5 border border-warm-sand/50 rounded-2xl px-6 py-4 outline-none focus:border-sunset-gold transition-all font-medium text-lg resize-none"
           />
+        </div>
+
+        <div className="text-xs text-safari-brown/70 ml-2 italic font-medium">
+          Note: Park entrance tickets are paid separately unless included in your confirmed quotation.
         </div>
 
         <div className="pt-6 flex flex-col gap-4">

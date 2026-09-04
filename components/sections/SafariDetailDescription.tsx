@@ -171,9 +171,13 @@ export default function SafariDetailDescription({ safari }: { safari: SafariPack
           <div className="w-full lg:w-5/12 bg-deep-charcoal p-10 md:p-16 flex flex-col justify-center relative overflow-hidden">
             <div className="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-sunset-gold/10 blur-[80px] pointer-events-none" />
             <span className="text-sunset-gold font-bold text-xs tracking-[0.4em] uppercase mb-6 block">Full Breakdown</span>
-            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-6">What&apos;s <br /> Included</h3>
+            <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-6">
+              {safari.slug === "tailor-made" ? "What May Be Included" : "What's Included"}
+            </h3>
             <p className="text-warm-sand/60 font-medium leading-relaxed text-base">
-              Every detail has been arranged so you can be fully present in the wild — not worrying about logistics.
+              {safari.slug === "tailor-made"
+                ? "Your Tailor-Made Yala Safari is planned around your preferences and confirmed arrangements. Final inclusions, transfer arrangements and park entrance fees will be confirmed before booking."
+                : "Yala National Park entrance tickets are paid separately unless otherwise confirmed in your quotation."}
             </p>
           </div>
           {/* Right inclusions panel */}

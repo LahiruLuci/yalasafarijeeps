@@ -18,8 +18,8 @@ const faqs = [
         a: "No. You can send an inquiry without any upfront payment. We will confirm your safari details and share pricing by WhatsApp.",
     },
     {
-        q: "Can you pick me up from my hotel?",
-        a: "Yes. Hotel pickup is available from Tissamaharama, Yala, Kataragama, Ella, and other nearby areas. Mention your hotel or location in your inquiry.",
+        q: "Is hotel pickup included?",
+        a: "Complimentary pickup and drop-off are available from selected locations around Yala, Tissamaharama, Kirinda and Kataragama. Transfers from more distant locations can be arranged at an additional charge.",
     },
     {
         q: "Can I book through WhatsApp?",

@@ -18,7 +18,7 @@ const safariTypes = [
     accentColor: "bg-[#D07A3F]",
     description:
       "Begin your journey before sunrise while stars fade over the horizon. The morning hours are the prime window for leopard sightings as they stalk the golden scrubland. You'll also witness a jaw-dropping Yala dawn that no photograph can ever fully capture.",
-    included: ["Hotel pickup & drop", "Expert tracker", "Premium 4x4 Jeep", "Bottled water", "Park entry fees"],
+    included: ["Private 4x4 Safari Jeep", "Experienced Driver/Guide", "Local Pickup & Drop-off", "Bottled Water", "Park Entry Assistance"],
     bgGradient: "from-[#D07A3F]/80",
   },
   {
@@ -34,7 +34,7 @@ const safariTypes = [
     accentColor: "bg-olive-green",
     description:
       "As the afternoon sun softens, prey animals emerge from the shade and predators ignite their evening hunt. The golden hour light transforms Yala into a palette of amber and ochre, creating a dramatic cinematic experience unlike any morning drive.",
-    included: ["Hotel pickup & drop", "Expert tracker", "Premium 4x4 Jeep", "Bottled water", "Park entry fees"],
+    included: ["Private 4x4 Safari Jeep", "Experienced Driver/Guide", "Local Pickup & Drop-off", "Bottled Water", "Park Entry Assistance"],
     bgGradient: "from-olive-green/80",
   },
   {
@@ -50,7 +50,7 @@ const safariTypes = [
     accentColor: "bg-safari-brown",
     description:
       "Create a private safari experience centered around your interests and schedule. From wildlife viewing preferences to custom pickups, we'll design a personalized plan. (Subject to park regulations and operations).",
-    included: ["Custom scheduling", "Expert tracker", "Premium 4x4 Jeep", "Private guide", "Hotel pickup & drop", "Park entry fees"],
+    included: ["Personalized Safari Planning", "Private 4x4 Safari Jeep", "Driver/Guide", "Flexible Pickup Arrangement", "Confirmed Inclusions Before Booking"],
     bgGradient: "from-safari-brown/80",
   },
 ];
@@ -92,8 +92,8 @@ export default function SafariTypesList() {
               key={s.id}
               onClick={() => setActiveId(s.id)}
               className={`flex-1 group text-left px-6 py-5 rounded-2xl border transition-all duration-500 cursor-pointer ${activeId === s.id
-                  ? "bg-white/10 border-sunset-gold shadow-[0_0_30px_rgba(208,122,63,0.2)]"
-                  : "bg-white/5 border-white/10 hover:border-white/30"
+                ? "bg-white/10 border-sunset-gold shadow-[0_0_30px_rgba(208,122,63,0.2)]"
+                : "bg-white/5 border-white/10 hover:border-white/30"
                 }`}
             >
               <div className="flex items-center justify-between mb-2">

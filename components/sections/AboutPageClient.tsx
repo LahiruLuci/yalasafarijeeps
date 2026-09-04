@@ -10,7 +10,7 @@ import { trackEvent } from "@/lib/analytics";
 const trustPoints = [
     {
         title: "Clear Safari Information",
-        desc: "Direct and honest details on morning, evening, and full-day safari timings."
+        desc: "Direct and honest details on morning, evening, and tailor-made safari options."
     },
     {
         title: "Fast WhatsApp Communication",

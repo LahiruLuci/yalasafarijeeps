@@ -30,10 +30,11 @@ export const safariPackages: SafariPackage[] = [
       "Block I & II coverage"
     ],
     included: [
-      "Private 4x4 Jeep",
-      "Permits & Taxes",
-      "Expert Guide/Driver",
-      "Hotel Pickup/Drop"
+      "Private 4x4 Safari Jeep",
+      "Experienced Safari Driver/Guide",
+      "Complimentary Local Hotel Pickup & Drop-off",
+      "Bottled Water",
+      "Assistance With Park Entrance Arrangements"
     ]
   },
   {
@@ -53,10 +54,11 @@ export const safariPackages: SafariPackage[] = [
       "Expert tracking skills"
     ],
     included: [
-      "Private 4x4 Jeep",
-      "Permits & Taxes",
-      "Expert Guide/Driver",
-      "Hotel Pickup/Drop"
+      "Private 4x4 Safari Jeep",
+      "Experienced Safari Driver/Guide",
+      "Complimentary Local Hotel Pickup & Drop-off",
+      "Bottled Water",
+      "Assistance With Park Entrance Arrangements"
     ]
   },
   {
@@ -76,11 +78,11 @@ export const safariPackages: SafariPackage[] = [
       "Flexible pickup planning"
     ],
     included: [
-      "Private 4x4 Jeep",
-      "Permits & Taxes",
-      "Expert Guide/Driver",
-      "Flexible custom planning",
-      "Hotel Pickup/Drop"
+      "Personalized Safari Planning",
+      "Private 4x4 Safari Jeep",
+      "Driver/Guide",
+      "Flexible Pickup Arrangement",
+      "Confirmed Inclusions Before Booking"
     ]
   }
 ];
